@@ -3,8 +3,8 @@ title: 'Watch “Be One” Celebration Event'
 subtitle: 'Plans announced for revised Hymnbook, Children’s Songbook'
 excerpt: 'Sacred music teaches the doctrines of the gospel, nourishes us spiritually, and has the power to unify Church members throughout the world. The Church has announced it is revising the hymnbook and children’s songbook and invites members to participate.'
 image: 'https://www.lds.org/bc/content/ldsorg/church/news/2018/05/02/580-RMN-Kenya4276-2018.jpg'
-tags: ['New Products', 'Music and Arts']
-category: 'Video'
+tags: ['Events', 'Church Leaders', 'Music and Arts']
+category: 'Events'
 contributor: 'janedoe'
 date: '2018-06-07T12:34:00+00:00'
 path: '/news/be-one-celebration'
@@ -12,73 +12,47 @@ path: '/news/be-one-celebration'
 
 ## Article Highlights
 
-- A core collection of hymns and children's songs will be the same in every language.
-- Give feedback and submit original music, text, or lyrics at [newmusic.lds.org](newmusic.lds.org).
-- Submissions are due July 1, 2019.
-
-> ![](https://www.lds.org/bc/content/prophets%20and%20apostles/Current/elder-rasband-2016-105%20copy.jpeg)"We desire to offer a consistent core collection of hymns and songs in every language that reflects the diverse needs of the global Church in our day." ---Elder Ronald A. Rasband of the Quorum of the Twelve Apostles
+- The live event is sold out but will be broadcast online and via satellite.
 
 ## Related Links
 
-- [Visit newmusic.lds.org now.](https://www.lds.org/music/new-music?lang=eng&cid=rdb_v_newmusic_eng)
+- [Learn more at BeOne.lds.org.](https://www.lds.org/topics/blacks-in-the-church?lang=eng&cid=rdb_v_beone)
+- [Read articles in Church magazines commemorating the 1978 revelation.](https://www.lds.org/liahona/2018/06/commemorating-the-1978-revelation/extending-the-blessings-of-the-priesthood?lang=eng)
 
-The Church has [announced](https://www.lds.org/bc/content/ldsorg/church/news/2018/06/15/15755_000.pdf?lang=eng) plans to publish new, unified editions of both *Hymns* and the *Children's Songbook.* And members are invited to participate in the revision process in unprecedented ways.
+---
 
-## Why the new editions?
+The First Presidency has announced a special worldwide event to celebrate the 40th anniversary of the 1978 revelation on the priesthood and invites adults and children of all ages and backgrounds to watch the broadcast.
 
-"We recognize the power that sacred music has to unify the members of the Church throughout the world," said Elder [Ronald A. Rasband](https://www.lds.org/church/leader/ronald-a-rasband?lang=eng) of the Quorum of the Twelve Apostles. "We desire to offer a consistent core collection of hymns and songs in every language that reflects the diverse needs of the global Church in our day."
+The live event is sold out.
 
-This core collection means that "members of the Church, no matter where they live in the world, will have the same hymns and the same songs and the same hymn numbers!" said Elder [Erich W. Kopischke](https://www.lds.org/church/leader/erich-w-kopischke?lang=eng), a General Authority Seventy and an adviser to the revision project. "We will literally be singing from the same page in every language." (Currently, hymnbooks and hymn numbers vary widely, which is inconvenient for multicultural wards and branches or for visitors who speak a different language.)
+"Be One" is the theme of the musical event, based on the Savior's admonition to "be one; and if ye are not one ye are not mine" ([D&C 38:27](https://www.lds.org/scriptures/dc-testament/dc/38.27?lang=eng#26)). It will feature messages from Church leaders and performances by Gladys Knight, Alex Boyé, the Bonner family, the Unity Gospel Choir International, and members of the Mormon Tabernacle Choir.
 
-Elder Kopischke also explained that in the past, English hymns were typically selected and then translated into other languages. "We hope that these new books will also include some of the best hymns and songs originating in other languages that will then be translated into English and the other languages of the world."
+## How to watch
 
-The revision process will also:
+View the live stream of the worldwide broadcast on Friday, June 1, 2018, at 7:30 p.m. (mountain daylight time). The broadcast will be live on the Church satellite system, [LDS.org](https://www.lds.org/lds.org?lang=eng), [MoTab.org](https://www.mormontabernaclechoir.org/), [mormonchannel.org](https://www.mormonchannel.org/), [Facebook](https://www.facebook.com/LDS), [Instagram](https://www.instagram.com/p/BhwIT63HczB/), Mormon Channel for Roku, and the [Mormon Channel on YouTube](https://www.youtube.com/user/MormonMessages).
 
-- Fill doctrinal gaps.
-- Resolve copyright issues from foreign translation restrictions.
-- Improve the quality of translations.
-- Provide more consistent digital access.
+The broadcast will be available for on-demand viewing soon after on [broadcasts.lds.org](https://www.lds.org/broadcasts?lang=eng) in American Sign Language, English, Haitian, French, Portuguese, and Spanish, with additional languages added in the following weeks.
 
-"As an extension to the new printed hymnbook and songbook, additional sacred music will be made available online, including music of local interest in each language," said Elder [LeGrand R. Curtis Jr](https://www.lds.org/church/leader/legrand-r-curtis?lang=eng)., a General Authority Seventy and an adviser to the revision project. "The new hymnbook and songbook, as well as music from the current hymnbook and songbook, will also be available online."
+Priesthood leaders should determine the viewing date and time that work best for the members in their area.
 
-## How you can help
+Stake technology specialists
 
-Under the direction of the First Presidency, committees comprised of members with diverse musical and cultural expertise will recommend revisions as they consider the feedback members provide and the original music members submit to [newmusic.lds.org](https://www.lds.org/music/new-music?lang=eng&cid=rdb_v_newmusic_eng).
+Stake technology specialists should refer to the [broadcast schedule](https://www.lds.org/letters?lang=eng&id=15713&inline=true&source=4).
 
-Provide feedback. "The opportunity for members to participate in the revision process like this is unprecedented," said Elder Kopischke. "We want the input of the members so we can better understand their needs. What are your favorite hymns and songs to sing at church and at home? Which ones do you think should be removed?" he said.
+## A monumental day
 
-To provide feedback, simply take the [survey](https://lds.qualtrics.com/jfe/form/SV_2m20pSAlCEcevVb) on [newmusic.lds.org](https://www.lds.org/music/new-music?lang=eng&cid=rdb_v_newmusic_eng).
+Forty years ago, on a truly monumental day in the history of the Church and the world, President Spencer W. Kimball announced that the opportunity to receive all the blessings of the priesthood would be extended to all of God's children everywhere in the world. The revelation rescinded the restriction on priesthood ordination. It also extended the blessings of the temple to all worthy Latter-day Saints, men and women (see [Official Declaration 2](https://www.lds.org/scriptures/dc-testament/od/2?lang=eng)).
 
-Submit original music. Anyone with an LDS Account is encouraged to submit original music or lyrics that will be considered for publication. [Newmusic.lds.org](https://www.lds.org/music/new-music?lang=eng&cid=rdb_v_newmusic_eng)has answers to [frequently asked questions](https://www.lds.org/music/new-music/frequently-asked-questions?lang=eng) and directions for [how to submit original work](https://www.lds.org/music/new-music/how-to-submit?lang=eng) (up to five original hymns and five original children's songs) by July 1, 2019.
+While the June celebration will hail the history of black Mormon pioneers and reaffirm the reality that "all are alike unto God" ([2 Nephi 26:33](https://www.lds.org/scriptures/bofm/2-ne/26.33?lang=eng#32)) in His global family, the event is intended to be much more than a celebration. It will also be a renewal of our collective commitment to pursue oneness in our relationships with each other and with heaven.
 
-"Perhaps the most meaningful hymns and songs of the Restoration have not yet been written," said Elder Curtis. "We encourage our talented members to prayerfully consider what they might add to the body of music already known and loved by the Church."
+Although attitudes and choices such as anger, bigotry, racism, prejudice, and intolerance cause separation and division, fortunately, prophets have taught that "a great day of unity is coming" ("[Our Hearts Knit as One](https://www.lds.org/general-conference/2008/10/our-hearts-knit-as-one?lang=eng)," Oct. 2008 general conference).
 
-About 6,000 original pieces were submitted for the current 1985 edition of *Hymns,*when the Church's membership hovered around 6 to 7 million. Now, with more than 16 million members, and members already sending in 500 to 700 music submissions every year, the committees anticipate they will receive many new original works to choose from.
+![](https://www.lds.org/bc/content/ldsorg/church/news/2018/05/02/620-london-nairobi-demonstrate-different-face-of-lds-church-duri_20.jpg)
 
-![Various language versions of the current Hymns and Children's Songbook.](https://www.lds.org/bc/content/ldsorg/church/news/2018/06/12/hymns/620-Hymns-2032212CWD_61D01978-1069-629B-E053-CA02630AB5DD.jpg)
+President Russell M. Nelson and his wife, Wendy, are greeted by Latter-day Saints Mercy Makau and her family in Nairobi, Kenya, on his world tour, April 16, 2018.
 
-"Along with prayer and the scriptures, hymns invite the Spirit into our hearts and strengthen our testimonies of Jesus Christ and His gospel," said Elder Rasband. "As parents sing together with their children in their homes and in our congregations, the doctrines of the gospel will sink deep into their hearts and they will have increased power to keep on the covenant path as encouraged by our prophet."
+President [M. Russell Ballard](https://www.lds.org/church/leader/m-russell-ballard?lang=eng) said, "We need to embrace God's children compassionately and eliminate any prejudice, including racism, sexism, and nationalism. Let it be said that we truly believe the blessings of the restored gospel of Jesus Christ are for every child of God" ("[The Trek Continues](https://www.lds.org/general-conference/2017/10/the-trek-continues?lang=eng)!", Oct. 2017 general conference).
 
-"Gospel-centered music will assist families worldwide in raising a sin-resistant generation," said Sister [Cristina B. Franco](https://www.lds.org/church/leader/cristina-b-franco?lang=eng) of the Primary General Presidency. "Music in the new children's songbook will be selected to teach the truths of the gospel in language that even children can understand."
+Added Elder [Quentin L. Cook](https://www.lds.org/church/leader/quentin-l-cook?lang=eng), "Anyone who claims superiority under the Father's plan because of characteristics like race, sex, nationality, language, or economic circumstances is morally wrong and does not understand the Lord's true purpose for all of our Father's children" ("[The Eternal Everyday](https://www.lds.org/general-conference/2017/10/the-eternal-everyday?lang=eng)," Oct. 2017 general conference).
 
-## Church music through history
-
-From the Mount of Olives, across the plains and valleys of the pioneers, and in every nation around the globe, disciples of Christ have sent their voices high in worship and praise through sacred music. As a source of doctrine, hymns and children's songs have a unique way of feeding us spiritually while uniting us as families, congregations, and members of a worldwide church.
-
-Calling Emma Smith to make the first selection of hymns in 1830, the Lord said, "For my soul delighteth in the song of the heart; yea, the song of the righteous is a prayer unto me, and it shall be answered with a blessing upon their heads" ([D&C 25:12](https://www.lds.org/scriptures/dc-testament/dc/25.12?lang=eng#11)).
-
-![Emma Smith's 1835 90-hymn book, A Collection of Sacred Hymns.](https://www.lds.org/bc/content/ldsorg/church/news/2018/06/12/hymns/620-hymns-84200-N3GCT37D.jpg)
-
-Church leaders also have long taught the importance of music in our worship.
-
-"Music has power to provide spiritual nourishment," President [Russell M. Nelson](https://www.lds.org/church/leader/russell-m-nelson?lang=eng) said. "It has healing power. It has the power to facilitate worship, allowing us to contemplate the Atonement and the Restoration of the gospel, with its saving principles and exalting ordinances. It provides power for us to express prayerful thoughts and bear testimony of sacred truths" ("[The Power and Protection of Worthy Music](https://www.lds.org/ensign/2009/12/the-power-and-protection-of-worthy-music?lang=eng)," *Ensign,* Dec. 2009, 16).
-
-Several English hymnbooks followed Emma's 1835 90-hymn book. The *Latter-day Saints' Psalmody* was the first hymnbook to include both music and text in 1889. *Songs of Zion,* published in 1908, included about 100 gospel hymns. The 1985 edition of *Hymns,* the Church's current hymnbook, has 341 hymns in 38 languages, with several more languages approaching completion.
-
-![Left: *The Latter-day Saints' Psalmody* was the first hymnbook to include both music and text in 1889. Right: The Primary Song Book was published in 1905.](https://www.lds.org/bc/content/ldsorg/church/news/2018/06/12/hymns/620-hymns-1318980-CWD_a4d69fb1-5e22-4d1d-a948-c4b7c79690f7.jpg)
-
-"I still remember singing songs in Primary as a young child growing up in Argentina, said Sister Franco. "Those songs still ring in my ears, along with the gospel principles that they taught me while I was very young."
-
-![Various publications of the Church's songs for children, including the current Children's Songbook.](https://www.lds.org/bc/content/ldsorg/church/news/2018/06/12/hymns/620-hymns-1497037-CWD_16A23F62-C5EF-27CF-E053-CA02630A690B.jpg)
-
-Eliza R. Snow collected the first set of songs for children in 1880, published two years after the founding of the Primary Mutual Improvement Association. *The\*\*Children Sing,* published in 1951, known affectionately by members as "the blue book," includes 199 songs divided into seven sections. Delicate pastel illustrations accompany the 268 songs in the currently used *Children's Songbook,* first published in 1989 in 21 languages, which compiled favorite resources from previous songbooks like *Sing with Me, More Songs for Children,* and *Activity Songs and Verses.*
+Learn more at [BeOne.lds.org](http://beone.lds.org/), which features a message from the First Presidency and stories of faith of Church members.
