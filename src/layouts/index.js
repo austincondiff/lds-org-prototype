@@ -29,6 +29,7 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <link rel="stylesheet" href="https://use.typekit.net/alk8vrh.css">
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
