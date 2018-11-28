@@ -18,7 +18,8 @@ const DailyScripture = ({ scripture, reference }) => {
       <div style={{ flex: '1' }}>
         <div
           style={{
-            fontFamily: 'ProximaNova-Semibold',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '600',
             fontSize: '13px',
             color: '#888888',
             letterSpacing: '1px',
@@ -31,7 +32,7 @@ const DailyScripture = ({ scripture, reference }) => {
         </div>
         <p
           style={{
-            fontFamily: 'Garamond',
+            fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
             fontSize: '32px',
             lineHeight: '1',
             color: '#0E0E0E',

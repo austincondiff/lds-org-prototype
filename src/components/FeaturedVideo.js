@@ -102,7 +102,8 @@ class FeaturedVideo extends React.Component {
                 <div>
                   <div
                     style={{
-                      fontFamily: 'ProximaNova-Bold',
+                      fontFamily: 'proxima-nova, sans-serif',
+                      fontWeight: '700',
                       fontSize: '40px',
                       color: '#FFFFFF',
                       lineHeight: '32px',
@@ -112,7 +113,8 @@ class FeaturedVideo extends React.Component {
                   </div>
                   <div
                     style={{
-                      fontFamily: 'ProximaNova-Light',
+                      fontFamily: 'proxima-nova, sans-serif',
+                      fontWeight: '300',
                       fontSize: '20px',
                       color: '#FFFFFF',
                       lineHeight: '32px',

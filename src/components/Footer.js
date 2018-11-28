@@ -26,7 +26,8 @@ const Footer = ({ siteTitle }) => (
             <div style={{ flex: '1' }} key={col.id}>
               <h5
                 style={{
-                  fontFamily: 'ProximaNova-Semibold',
+                  fontFamily: 'proxima-nova, sans-serif',
+                  fontWeight: '600',
                   fontSize: '15px',
                   color: 'rgba(0,0,0,0.44)',
                   textTransform: 'uppercase',
@@ -43,7 +44,8 @@ const Footer = ({ siteTitle }) => (
                     <Link
                       style={{
                         textDecoration: 'none',
-                        fontFamily: 'ProximaNova-Semibold',
+                        fontFamily: 'proxima-nova, sans-serif',
+                        fontWeight: '600',
                         fontSize: '14px',
                         color: '#000000',
                       }}
@@ -127,7 +129,8 @@ const Footer = ({ siteTitle }) => (
       >
         <div
           style={{
-            fontFamily: 'ProximaNova-Semibold',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '600',
             fontSize: '14px',
             color: '#000000',
             flex: '1',
@@ -139,7 +142,8 @@ const Footer = ({ siteTitle }) => (
           <Link
             style={{
               opacity: '0.6',
-              fontFamily: 'ProximaNova-Semibold',
+              fontFamily: 'proxima-nova, sans-serif',
+              fontWeight: '600',
               fontSize: '12px',
               color: '#000000',
               textAlign: 'right',
@@ -153,7 +157,8 @@ const Footer = ({ siteTitle }) => (
           <Link
             style={{
               opacity: '0.6',
-              fontFamily: 'ProximaNova-Semibold',
+              fontFamily: 'proxima-nova, sans-serif',
+              fontWeight: '600',
               fontSize: '12px',
               color: '#000000',
               textAlign: 'right',
@@ -167,7 +172,8 @@ const Footer = ({ siteTitle }) => (
           <Link
             style={{
               opacity: '0.6',
-              fontFamily: 'ProximaNova-Semibold',
+              fontFamily: 'proxima-nova, sans-serif',
+              fontWeight: '600',
               fontSize: '12px',
               color: '#000000',
               textAlign: 'right',

@@ -49,7 +49,8 @@ const Hero = ({ title, subtitle, excerpt, image, category, link }) => {
           <div style={{ width: '50%' }}>
             <div
               style={{
-                fontFamily: 'ProximaNova-Bold',
+                fontFamily: 'proxima-nova, sans-serif',
+                fontWeight: '700',
                 fontSize: '14px',
                 color: '#FFFFFF',
                 textAlign: 'left',
@@ -65,7 +66,7 @@ const Hero = ({ title, subtitle, excerpt, image, category, link }) => {
             </div>
             <div
               style={{
-                fontFamily: 'Garamond',
+                fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
                 fontSize: '48px',
                 color: '#FFFFFF',
                 textAlign: 'left',
@@ -78,7 +79,8 @@ const Hero = ({ title, subtitle, excerpt, image, category, link }) => {
             <div
               style={{
                 opacity: '0.9',
-                fontFamily: 'ProximaNova-Light',
+                fontFamily: 'proxima-nova, sans-serif',
+                fontWeight: '300',
                 fontSize: '24px',
                 color: '#FFFFFF',
                 textAlign: 'left',
@@ -90,7 +92,7 @@ const Hero = ({ title, subtitle, excerpt, image, category, link }) => {
             </div>
             <div
               style={{
-                fontFamily: 'ProximaNova-Regular',
+                fontFamily: 'proxima-nova, sans-serif',
                 fontSize: '18px',
                 color: '#FFFFFF',
                 letterSpacing: '0',

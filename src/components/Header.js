@@ -104,7 +104,8 @@ class Header extends React.Component {
                       <div
                         style={{
                           display: 'inline-block',
-                          fontFamily: 'ProximaNova-Semibold',
+                          fontFamily: 'proxima-nova, sans-serif',
+                          fontWeight: '600',
                           fontSize: '14px',
                           color:
                             activeNavItem && n.id === activeNavItem.id
@@ -135,7 +136,8 @@ class Header extends React.Component {
                     <Icon name="earth" />
                     <span
                       style={{
-                        fontFamily: 'ProximaNova-Semibold',
+                        fontFamily: 'proxima-nova, sans-serif',
+                        fontWeight: '600',
                         fontSize: '14px',
                         color: '#000000',
                         marginLeft: 8,
@@ -230,7 +232,7 @@ class Header extends React.Component {
             <div style={{ margin: '0 -16px 0 -16px', display: 'flex' }}>
               <div
                 style={{
-                  fontFamily: 'Garamond',
+                  fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
                   fontSize: '28px',
                   color: '#0096AC',
                   lineHeight: '32px',
@@ -252,7 +254,8 @@ class Header extends React.Component {
                   >
                     <h4
                       style={{
-                        fontFamily: 'ProximaNova-Bold',
+                        fontFamily: 'proxima-nova, sans-serif',
+                        fontWeight: '700',
                         fontSize: '13px',
                         color: '#8F8F8F',
                         letterSpacing: '0.1px',
@@ -269,7 +272,8 @@ class Header extends React.Component {
                             margin: '4px 0',
                             padding: 0,
                             listStyle: 'none',
-                            fontFamily: 'ProximaNova-Semibold',
+                            fontFamily: 'proxima-nova, sans-serif',
+                            fontWeight: '600',
                             fontSize: '13px',
                           }}
                           key={`navLink${itemI}`}

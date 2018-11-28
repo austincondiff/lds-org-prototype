@@ -18,7 +18,7 @@ const Footer = ({ title, description, buttonLabel, path }) => (
       <div style={{ flex: '1' }}>
         <h3
           style={{
-            fontFamily: 'Garamond',
+            fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
             fontSize: '32px',
             color: '#003057',
             lineHeight: '36px',
@@ -30,7 +30,8 @@ const Footer = ({ title, description, buttonLabel, path }) => (
         </h3>
         <p
           style={{
-            fontFamily: 'ProximaNova-Light',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '300',
             fontSize: '20px',
             color: '#003057',
             lineHeight: '36px',
@@ -44,7 +45,8 @@ const Footer = ({ title, description, buttonLabel, path }) => (
         <Link
           style={{
             background: '#01B6D1',
-            fontFamily: 'ProximaNova-Semibold',
+            fontFamily: 'proxima-nova, sans-serif',
+            fontWeight: '600',
             fontSize: '20px',
             color: '#FFFFFF',
             textAlign: 'center',

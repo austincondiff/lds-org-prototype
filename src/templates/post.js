@@ -44,7 +44,8 @@ class Template extends React.Component {
             >
               <a
                 style={{
-                  fontFamily: 'ProximaNova-Bold',
+                  fontFamily: 'proxima-nova, sans-serif',
+                  fontWeight: '700',
                   fontSize: '14px',
                   color: '#22282E',
                   letterSpacing: '1px',
@@ -56,7 +57,7 @@ class Template extends React.Component {
               </a>
               <h2
                 style={{
-                  fontFamily: 'Garamond',
+                  fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
                   fontSize: '48px',
                   color: '#0096AC',
                   textAlign: 'left',
@@ -69,7 +70,8 @@ class Template extends React.Component {
               </h2>
               <p
                 style={{
-                  fontFamily: 'ProximaNova-Light',
+                  fontFamily: 'proxima-nova, sans-serif',
+                  fontWeight: '300',
                   fontSize: '20px',
                   color: '#22282E',
                   textAlign: 'left',
@@ -205,7 +207,8 @@ class Template extends React.Component {
                   <Link
                     to={`/tags/${tag}`}
                     style={{
-                      fontFamily: 'ProximaNova-Bold',
+                      fontFamily: 'proxima-nova, sans-serif',
+                      fontWeight: '700',
                       fontSize: '13px',
                       color: '#22282E',
                       letterSpacing: '1px',
@@ -229,7 +232,8 @@ class Template extends React.Component {
                       style={{
                         color: 'black',
                         textDecoration: 'none',
-                        fontFamily: 'ProximaNova-Bold',
+                        fontFamily: 'proxima-nova, sans-serif',
+                        fontWeight: '700',
                         textTransform: 'uppercase',
                         fontSize: '12px',
                         letterSpacing: '1px',
@@ -260,7 +264,8 @@ class Template extends React.Component {
                       style={{
                         color: 'black',
                         textDecoration: 'none',
-                        fontFamily: 'ProximaNova-Bold',
+                        fontFamily: 'proxima-nova, sans-serif',
+                        fontWeight: '700',
                         textTransform: 'uppercase',
                         fontSize: '12px',
                         letterSpacing: '1px',
@@ -296,7 +301,7 @@ class Template extends React.Component {
           >
             <h3
               style={{
-                fontFamily: 'Garamond',
+                fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
                 fontSize: '32px',
                 color: '#000000',
                 textAlign: 'center',

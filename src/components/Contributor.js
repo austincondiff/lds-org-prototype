@@ -40,7 +40,8 @@ const Contributors = ({ username }) => {
         <div>
           <div
             style={{
-              fontFamily: 'ProximaNova-Semibold',
+              fontFamily: 'proxima-nova, sans-serif',
+              fontWeight: '600',
               fontSize: '13px',
               color: '#434343',
               letterSpacing: '1px',
@@ -53,7 +54,7 @@ const Contributors = ({ username }) => {
           </div>
           <h4
             style={{
-              fontFamily: 'Garamond',
+              fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
               fontSize: '32px',
               color: '#0E0E0E',
               letterSpacing: '0',
@@ -65,7 +66,8 @@ const Contributors = ({ username }) => {
           </h4>
           <p
             style={{
-              fontFamily: 'ProximaNova-Light',
+              fontFamily: 'proxima-nova, sans-serif',
+              fontWeight: '300',
               fontSize: '18px',
               color: '#434343',
               letterSpacing: '0',
@@ -77,7 +79,7 @@ const Contributors = ({ username }) => {
           </p>
           <p
             style={{
-              fontFamily: 'ProximaNova-Regular',
+              fontFamily: 'proxima-nova, sans-serif',
               fontSize: '18px',
               color: '#2F2F2F',
               lineHeight: '24px',

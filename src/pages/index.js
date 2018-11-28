@@ -20,7 +20,8 @@ const styles = {
   quicklink: {
     textAlign: 'center',
     textDecoration: 'none',
-    fontFamily: 'ProximaNova-Semibold',
+    fontFamily: 'proxima-nova, sans-serif',
+    fontWeight: '600',
     fontSize: '16px',
     color: '#000000',
     display: 'flex',

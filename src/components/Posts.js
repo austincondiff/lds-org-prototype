@@ -50,7 +50,8 @@ const Posts = ({ posts, large }) => {
             <div>
               <Link
                 style={{
-                  fontFamily: 'ProximaNova-Bold',
+                  fontFamily: 'proxima-nova, sans-serif',
+                  fontWeight: '700',
                   fontSize: '12px',
                   color: '#FFFFFF',
                   textAlign: 'left',
@@ -87,7 +88,7 @@ const Posts = ({ posts, large }) => {
                   style={{
                     margin: 0,
                     opacity: '0.8',
-                    fontFamily: 'ProximaNova-Regular',
+                    fontFamily: 'proxima-nova, sans-serif',
                     fontSize: '16px',
                     color: '#000000',
                     lineHeight: '1.25',

@@ -668,7 +668,7 @@ pre tt:after {
 .post-content > figure figcaption {
   font-size: 14px;
   color: #555;
-  font-family: ProximaNova-Regular;
+  font-family: proxima-nova, sans-serif;
   margin-top: -1rem;
   padding-bottom: 1rem;
 }
