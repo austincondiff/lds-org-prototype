@@ -1,4 +1,54 @@
 <svg width="78px" height="62px" viewBox="0 0 78 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M40,53.3426657 C41.6499555,51.3036669 44.1727339,50 47,50 L76,50 L76,11 L47,11 C43.1340068,11 40,14.1340068 40,18 L40,53.3426657 Z M40,59 L40,61 L40,62 L38,62 L38,59 C38,55.1340068 34.8659932,52 31,52 L7,52 L7,50 L31,50 C33.8272661,50 36.3500445,51.3036669 38,53.3426657 L38,18 C38,14.1340068 34.8659932,11 31,11 L25.0298885,11 L25.0298885,9 L31,9 C34.4829314,9 37.5037731,10.978441 39,13.8727979 C40.4962269,10.978441 43.5170686,9 47,9 L78,9 L78,62 L46.7999,62 L46.7999,60 L76,60 L76,52 L47,52 C43.1340068,52 40,55.1340068 40,59 Z M31.2001,60 L31.2001,62 L5.68434189e-14,62 L5.68434189e-14,9 L13.0381354,9 L13.0381354,11 L2,11 L2,60 L31.2001,60 Z" id="Combined-Shape" fill="#01B6D1"></path>
-  <path d="M12,6 L11,6 C10.4477153,6 10,6.44771525 10,7 L10,9 L8,9 L8,7 C8,5.34314575 9.34314575,4 11,4 L12,4 L12,3 C12,1.34095533 13.9939358,-1.59761093e-12 15.9843334,-1.59872116e-12 C17.9787444,-1.59872116e-12 20,1.34049693 20,3 L20,32.2372884 L15.97747,40.236074 L12,32.2348454 L12,6 Z M18,11 L14,11 L14,31.7651546 L15.9878189,35.763926 L18,31.7627116 L18,11 Z M18,9 L18,3 C18,2.65951264 17.0055601,2 15.9843334,2 C14.9695376,2 14,2.65203034 14,3 L14,9 L18,9 Z" id="Combined-Shape" fill="#F68D2E"></path>
+  <g id="study-line-icon" fill="none" transform="translate(1, 1)" stroke-width="2">
+    <path id="study-book-left-inside" d="M24.0298885,9 L30,9 C34.418278,9 38,12.581722 38,17 L38,60" stroke="#01B6D1"></path>
+    <polyline id="study-book-left-ouside" stroke="#01B6D1" points="30.2001 60 5.5067062e-14 60 5.5067062e-14 9 12.0381354 9"></polyline>
+    <path id="study-book-left-lip" d="M6,50 L30,50 C34.418278,50 38,53.581722 38,58 L38,60.7907591 L38,61" stroke="#01B6D1"></path>
+    <path id="study-book-right" d="M68.2001,60 L38,60 L38,9 L68,9 C72.418278,9 76,12.581722 76,17 L76,60" stroke="#01B6D1" transform="translate(57.000000, 34.500000) scale(-1, 1) translate(-57.000000, -34.500000) "></path>
+    <path id="study-book-right-lip" d="M38,50 L68,50 C72.418278,50 76,53.581722 76,58 L76,60" stroke="#01B6D1" transform="translate(57.000000, 55.000000) scale(-1, 1) translate(-57.000000, -55.000000) "></path>
+    <path id="study-pen-main" d="M12,2 C12,1 13.4765218,-1.62269156e-12 14.9843334,-1.62359015e-12 C16.4921451,-1.62359015e-12 18,1 18,2 C18,2 18,11.6666667 18,31 L14.9826444,37 L12,31 C12,11.6666667 12,2 12,2 Z" stroke="#F68D2E"></path>
+    <path id="study-pen-cap" d="M18,9 L12,9" id="Path-9" stroke="#F68D2E"></path>
+    <path id="study-pen-clip" d="M12,4 L10,4 C8.8954305,4 8,4.8954305 8,6 L8,8" id="Path-10" stroke="#F68D2E"></path>
+  </g>
+  <style>
+    #study-book-left-inside {
+      stroke-dasharray: 62;
+      stroke-dashoffset: -62;
+      animation: dash 400ms 0ms linear forwards;
+    }
+    #study-book-left-ouside {
+      stroke-dasharray: 94;
+      stroke-dashoffset: -94;
+      animation: dash 550ms 450ms linear forwards;
+    }
+    #study-book-left-lip {
+      stroke-dasharray: 40;
+      stroke-dashoffset: -40;
+      animation: dash 400ms 0ms linear forwards;
+    }
+    #study-book-right {
+      stroke-dasharray: 167;
+      stroke-dashoffset: -167;
+      animation: dash 1000ms 0ms linear forwards;
+    }
+    #study-book-right-lip {
+      stroke-dasharray: 45;
+      stroke-dashoffset: -45;
+      animation: dash 400ms 0ms linear forwards;
+    }
+    #study-pen-main {
+      stroke-dasharray: 80;
+      stroke-dashoffset: -80;
+      animation: dash 600ms 400ms linear forwards;
+    }
+    #study-pen-cap {
+      stroke-dasharray: 6;
+      stroke-dashoffset: 6;
+      animation: dash 50ms 400ms linear forwards;
+    }
+    #study-pen-clip {
+      stroke-dasharray: 8;
+      stroke-dashoffset: 8;
+      animation: dash 50ms 450ms linear forwards;
+    }
+  </style>
 </svg>

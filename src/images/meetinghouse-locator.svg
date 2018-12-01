@@ -1,4 +1,63 @@
-<svg width="70px" height="76px" viewBox="0 0 70 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M45.606596,66.1923824 L53.3346023,73.9203887 L51.9203887,75.3346023 L44.2756625,67.689876 C42.1226326,69.7409022 39.2083553,71 36,71 C34.0844817,71 32.2313109,70.5500321 30.5603098,69.6988844 L31.4680623,67.9167549 C32.8594991,68.6255027 34.401848,69 36,69 C41.5228475,69 46,64.5228475 46,59 C46,53.4771525 41.5228475,49 36,49 C30.4771525,49 26,53.4771525 26,59 C26,60.4590107 26.312029,61.8720014 26.9068778,63.1675544 L25.0893084,64.0020852 C24.3748571,62.4460433 24,60.7485423 24,59 C24,52.372583 29.372583,47 36,47 C42.627417,47 48,52.372583 48,59 C48,61.698035 47.1095907,64.1881038 45.606596,66.1923824 Z M36,51 L36,53 C32.6862915,53 30,55.6862915 30,59 L28,59 C28,54.581722 31.581722,51 36,51 Z" id="Combined-Shape" fill="#FC4E6D"></path>
-  <path d="M14,48.2970302 L14,43.3534144 L27,37.5034144 L27,30 L30,30 L30,20.5510046 L28.4383364,21.3126041 L27.5616636,19.5149821 L30.166481,18.2446524 L35,0.118956326 L39.833519,18.2446524 L42.4383364,19.5149821 L41.5616636,21.3126041 L40,20.5510046 L40,26 L38,26 L38,19.5756351 L35,18.112581 L32,19.5756351 L32,30 L43,30 L43,37.5034144 L56,43.3534144 L56,48.2970302 L70,54.5586935 L70,65 L51.0094648,65 L51.0094648,63 L54,63 L54,44.6465856 L35,36.0965856 L16,44.6465856 L16,63 L27.0042901,63 L27.0042901,65 L1.70530257e-13,65 L7.38964445e-13,54.5586935 L14,48.2970302 Z M14,50.4879597 L2,55.8550996 L2,63 L14,63 L14,50.4879597 Z M56,50.4879597 L56,63 L68,63 L68,55.8550996 L56,50.4879597 Z M32.5457996,17.0842951 L35,15.887419 L37.4542004,17.0842951 L35,7.88104367 L32.5457996,17.0842951 Z M29,36.6034144 L35,33.9034144 L41,36.6034144 L41,32 L29,32 L29,36.6034144 Z" id="Combined-Shape" fill="#01B6D1"></path>
+<svg fill="none" width="70px" height="76px" viewBox="0 0 70 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="meetinghouse-locator-line-icon" transform="translate(1, 4)" stroke-width="2">
+    <polyline id="mhl-meetinghouse-main" stroke="#01B6D1" points="14 60 14 40 14 40 34 31 54 40 54 60"></polyline>
+    <polyline id="mhl-meetinghouse-left" stroke="#01B6D1" points="26.0042901 60 1.59872116e-14 60 4.99156272e-13 51.2068966 14.0062294 44.9424471"></polyline>
+    <polyline id="mhl-meetinghouse-right" stroke="#01B6D1" points="54.0130711 44.9510795 68 51.2068966 68 60 50.0094648 60"></polyline>
+    <polyline id="mhl-steeple-base" stroke="#01B6D1" points="27 34 27 27 41 27 41 34"></polyline>
+    <polyline id="mhl-steeple-main" stroke="#01B6D1" points="30 27 30 15 34 -7.99360578e-14 38 15 38 22"></polyline>
+    <polyline id="mhl-steeple-mid" stroke="#01B6D1" points="27 16.4137931 34 13 41 16.4137931"></polyline>
+    <path id="mhl-magnify-main" d="M30.014186,64.8078197 C31.5108458,65.5701642 33.2052262,66 35,66 C41.0751322,66 46,61.0751322 46,55 C46,48.9248678 41.0751322,44 35,44 C28.9248678,44 24,48.9248678 24,55 C24,56.6363066 24.3572831,58.1891652 24.9980931,59.5848198" stroke="#FC4E6D"></path>
+    <path id="mhl-magnify-handle" d="M43.5,62.5 L50.9203887,69.9203887" stroke="#FC4E6D" stroke-linecap="square"></path>
+    <path id="mhl-magnify-glare" d="M35,48 C31.1340068,48 28,51.1340068 28,55" stroke="#FC4E6D"></path>
+  </g>
+  <style>
+    #mhl-meetinghouse-main {
+      stroke-dasharray: 85;
+      stroke-dashoffset: 85;
+      animation: dash 800ms 0ms linear forwards;
+    }
+    #mhl-meetinghouse-left {
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: dash 800ms 300ms linear forwards;
+    }
+    #mhl-meetinghouse-right {
+      stroke-dasharray: 42;
+      stroke-dashoffset: -42;
+      animation: dash 800ms 300ms linear forwards;
+    }
+    #mhl-steeple-base {
+      stroke-dasharray: 28;
+      stroke-dashoffset: 28;
+      animation: dash 400ms 400ms linear forwards;
+    }
+    #mhl-steeple-main {
+      stroke-dasharray: 50;
+      stroke-dashoffset: 50;
+      animation: dash 400ms 600ms linear forwards;
+    }
+    #mhl-steeple-mid {
+      stroke-dasharray: 16;
+      stroke-dashoffset: 16;
+      animation: dash 200ms 800ms linear forwards;
+    }
+    #mhl-magnify-main {
+      stroke-dasharray: 64;
+      stroke-dashoffset: -64;
+      animation: dash 300ms 0ms linear forwards;
+    }
+    #mhl-magnify-handle {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+      animation: dash 300ms 300ms linear forwards;
+    }
+    #mhl-magnify-glare {
+      stroke-dasharray: 20;
+      stroke-dashoffset: -20;
+      animation: dash 300ms 300ms linear forwards;
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 0 }
+    }
+  </style>
 </svg>

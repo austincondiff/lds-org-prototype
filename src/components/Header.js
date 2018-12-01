@@ -115,7 +115,14 @@ class Header extends React.Component {
                           textDecoration: 'none',
                           cursor: 'pointer',
                         }}
-                        onClick={() => this.setState({ activeNavItem: n })}
+                        onClick={() =>
+                          this.setState({
+                            activeNavItem:
+                              activeNavItem && activeNavItem.id === n.id
+                                ? null
+                                : n,
+                          })
+                        }
                       >
                         {n.label}
                       </div>

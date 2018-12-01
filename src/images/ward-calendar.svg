@@ -1,4 +1,147 @@
 <svg width="66px" height="62px" viewBox="0 0 66 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M64,60 L64,21 L66,21 L66,62 L-5.04485342e-13,62 L-5.04485342e-13,17 L2,17 L2,60 L64,60 Z M36,27 L36,25 L39,25 L39,27 L36,27 Z M45,27 L45,25 L48,25 L48,27 L45,27 Z M54,27 L54,25 L57,25 L57,27 L54,27 Z M36,36 L36,34 L39,34 L39,36 L36,36 Z M45,36 L45,34 L48,34 L48,36 L45,36 Z M54,36 L54,34 L57,34 L57,36 L54,36 Z M9,36 L9,34 L12,34 L12,36 L9,36 Z M18,36 L18,34 L21,34 L21,36 L18,36 Z M27,36 L27,34 L30,34 L30,36 L27,36 Z M36,45 L36,43 L39,43 L39,45 L36,45 Z M45,45 L45,43 L48,43 L48,45 L45,45 Z M54,45 L54,43 L57,43 L57,45 L54,45 Z M9,45 L9,43 L12,43 L12,45 L9,45 Z M18,45 L18,43 L21,43 L21,45 L18,45 Z M27,45 L27,43 L30,43 L30,45 L27,45 Z M9,53 L9,51 L12,51 L12,53 L9,53 Z M18,53 L18,51 L21,51 L21,53 L18,53 Z" id="Combined-Shape" fill="#01B6D1"></path>
-  <path d="M46.1260175,5 L50,5 L50,7 L21.9170416,7 C21.4409635,9.83771334 18.9729963,12 16,12 L15,12 L15,10 L16,10 C18.209139,10 20,8.209139 20,6 C20,3.790861 18.209139,2 16,2 C14.1361606,2 12.5700603,3.27477279 12.1260175,5 L16,5 L16,7 L2,7 L2,11.068914 L-1.687539e-13,11.068914 L-1.687539e-13,5 L10.0829584,5 C10.5590365,2.16228666 13.0270037,0 16,0 C18.9729963,0 21.4409635,2.16228666 21.9170416,5 L44.0829584,5 C44.5590365,2.16228666 47.0270037,0 50,0 C52.9729963,0 55.4409635,2.16228666 55.9170416,5 L66,5 L66,17 L-1.56319402e-13,17 L-1.56319402e-13,15 L64,15 L64,7 L55.9170416,7 C55.4409635,9.83771334 52.9729963,12 50,12 L49,12 L49,10 L50,10 C52.209139,10 54,8.209139 54,6 C54,3.790861 52.209139,2 50,2 C48.1361606,2 46.5700603,3.27477279 46.1260175,5 Z" id="Combined-Shape" fill="#FC4E6D"></path>
+  <g id="calendar-line-icon" fill="none" transform="translate(1, 1)" stroke-width="2">
+    <polyline id="calendar-body" stroke="#01B6D1" points="-2.70117262e-13 16 1.84741111e-13 60 64 60 64 20"></polyline>
+    <polyline id="calendar-head-bottom" stroke="#FC4E6D" stroke-linecap="square" points="-1.56541446e-13 15 64 15 64 5 54 5"></polyline>
+    <polyline id="calendar-head-left" stroke="#FC4E6D" stroke-linecap="square" points="14 5 -1.71612724e-13 5 -1.71612724e-13 9.06891395"></polyline>
+    <path id="calendar-head-middle" d="M48,5 L20,5" stroke="#FC4E6D" stroke-linecap="square"></path>
+    <path id="calendar-ring-left" d="M15,10 C17.7614237,10 20,7.76142375 20,5 C20,2.23857625 17.7614237,0 15,0 C12.2385763,0 10,2.23857625 10,5" stroke="#FC4E6D" stroke-linecap="square"></path>
+    <path id="calendar-ring-right" d="M49,10 C51.7614237,10 54,7.76142375 54,5 C54,2.23857625 51.7614237,0 49,0 C46.2385763,0 44,2.23857625 44,5" stroke="#FC4E6D" stroke-linecap="square"></path>
+    <path id="calendar-date-1" d="M35,25 L38,25" stroke="#01B6D1"></path>
+    <path id="calendar-date-2" d="M44,25 L47,25" stroke="#01B6D1"></path>
+    <path id="calendar-date-3" d="M53,25 L56,25" stroke="#01B6D1"></path>
+    <path id="calendar-date-4" d="M8,34 L11,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-5" d="M17,34 L20,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-6" d="M26,34 L29,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-7" d="M35,34 L38,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-8" d="M44,34 L47,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-9" d="M53,34 L56,34" stroke="#01B6D1"></path>
+    <path id="calendar-date-10" d="M8,43 L11,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-11" d="M17,43 L20,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-12" d="M26,43 L29,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-13" d="M35,43 L38,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-14" d="M44,43 L47,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-15" d="M53,43 L56,43" stroke="#01B6D1"></path>
+    <path id="calendar-date-16" d="M8,51 L11,51" stroke="#01B6D1"></path>
+    <path id="calendar-date-17" d="M17,51 L20,51" stroke="#01B6D1"></path>
+  </g>
+  <style>
+    #calendar-body {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: dash 1000ms 0ms linear forwards;
+    }
+    #calendar-head-bottom {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      animation: dash 600ms 0ms linear forwards;
+    }
+    #calendar-head-middle {
+      stroke-dasharray: 28;
+      stroke-dashoffset: 28;
+      animation: dash 200ms 600ms linear forwards;
+    }
+    #calendar-head-left {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+      animation: dash 200ms 800ms linear forwards;
+    }
+    #calendar-ring-left {
+      stroke-dasharray: 24;
+      stroke-dashoffset: 24;
+      animation: dash 300ms 700ms linear forwards;
+    }
+    #calendar-ring-right {
+      stroke-dasharray: 24;
+      stroke-dashoffset: 24;
+      animation: dash 300ms 700ms linear forwards;
+    }
+    #calendar-date-1 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 150ms linear forwards;
+    }
+    #calendar-date-2 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 200ms linear forwards;
+    }
+    #calendar-date-3 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 250ms linear forwards;
+    }
+    #calendar-date-4 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 300ms linear forwards;
+    }
+    #calendar-date-5 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 350ms linear forwards;
+    }
+    #calendar-date-6 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 400ms linear forwards;
+    }
+    #calendar-date-7 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 450ms linear forwards;
+    }
+    #calendar-date-8 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 500ms linear forwards;
+    }
+    #calendar-date-9 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 550ms linear forwards;
+    }
+    #calendar-date-10 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 600ms linear forwards;
+    }
+    #calendar-date-11 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 650ms linear forwards;
+    }
+    #calendar-date-12 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 700ms linear forwards;
+    }
+    #calendar-date-13 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 750ms linear forwards;
+    }
+    #calendar-date-14 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 800ms linear forwards;
+    }
+    #calendar-date-15 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 850ms linear forwards;
+    }
+    #calendar-date-16 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 900ms linear forwards;
+    }
+    #calendar-date-17 {
+      stroke-dasharray: 3;
+      stroke-dashoffset: 3;
+      animation: dash 50ms 950ms linear forwards;
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 0 }
+    }
+  </style>
 </svg>

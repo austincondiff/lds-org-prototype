@@ -1,4 +1,87 @@
-<svg width="78px" height="65px" viewBox="0 0 78 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M8,57 L6,57 L2,57 L2,60 C2,61.6568542 3.34314575,63 5,63 L73,63 C74.6568542,63 76,61.6568542 76,60 L76,57 L73,57 L71,57 L50.8739825,57 C50.4299397,58.7252272 48.8638394,60 47,60 L32,60 C30.1361606,60 28.5700603,58.7252272 28.1260175,57 L8,57 Z M6,55 L6,23 C6,20.2385763 8.23857625,18 11,18 L20,18 L20,20 L11,20 C9.34314575,20 8,21.3431458 8,23 L8,55 L30,55 L30,56 C30,57.1045695 30.8954305,58 32,58 L47,58 C48.1045695,58 49,57.1045695 49,56 L49,55 L71,55 L71,23 C71,21.3431458 69.6568542,20 68,20 L55,20 L55,18 L68,18 C70.7614237,18 73,20.2385763 73,23 L73,55 L78,55 L78,60 C78,62.7614237 75.7614237,65 73,65 L5,65 C2.23857625,65 3.33066907e-16,62.7614237 0,60 L0,55 L6,55 Z M25,28 L27,28 L27,30 L25,30 L25,28 Z M25,32 L27,32 L27,34 L25,34 L25,32 Z M25,36 L27,36 L27,38 L25,38 L25,36 Z M29,36 L31,36 L31,38 L29,38 L29,36 Z M33,36 L35,36 L35,38 L33,38 L33,36 Z M37,36 L39,36 L39,38 L37,38 L37,36 Z M41,36 L43,36 L43,38 L41,38 L41,36 Z M45,36 L47,36 L47,38 L45,38 L45,36 Z M49,36 L51,36 L51,38 L49,38 L49,36 Z M53,36 L55,36 L55,38 L53,38 L53,36 Z M53,32 L55,32 L55,34 L53,34 L53,32 Z M53,28 L55,28 L55,30 L53,30 L53,28 Z" id="Combined-Shape" fill="#01B6D1"></path>
-  <path d="M25,24 L25,-9.20152843e-13 L55,-9.20152843e-13 L55,20 L53,20 L53,2 L27,2 L27,24 L58,24 L58,26 L22,26 L22,24 L25,24 Z M34,10 L34,8 L46,8 L46,10 L34,10 Z M34,16 L34,14 L46,14 L46,16 L34,16 Z" id="Combined-Shape" fill="#8DB344"></path>
+<svg width="78px" height="80px" viewBox="0 0 78 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="indexing-line-icon" fill="none" transform="translate(1.000000, 8.000000)">
+    <path id="indexing-laptop-left" d="M6,55 L6,22 C6,19.790861 7.790861,18 10,18 L18,18" stroke="#01B6D1" stroke-width="2" stroke-linecap="square"></path>
+    <path id="indexing-laptop-right" d="M71,55 L71,22 C71,19.790861 69.209139,18 67,18 L55,18" stroke="#01B6D1" stroke-width="2" stroke-linecap="square"></path>
+    <path id="indexing-laptop-base" d="M0,55 L28,55 L28,55 C28,56.6568542 29.3431458,58 31,58 L46,58 C47.6568542,58 49,56.6568542 49,55 L76,55 L76,59 C76,61.209139 74.209139,63 72,63 L4,63 C1.790861,63 2.705415e-16,61.209139 0,59 L0,55 Z" stroke="#01B6D1" stroke-width="2"></path>
+    <path id="indexing-slit" d="M21,24 L57,24" stroke="#8DB344" stroke-width="2"></path>
+    <path id="indexing-page-line-1" d="M33,8 L45,8" stroke="#8DB344" stroke-width="2"></path>
+    <path id="indexing-page-line-2" d="M33,14 L45,14" stroke="#8DB344" stroke-width="2"></path>
+    <polyline id="indexing-page-main" stroke="#8DB344" stroke-width="2" stroke-linecap="square" points="25 24 25 -9.219292e-13 53 -9.219292e-13 53 18"></polyline>
+    <rect id="indexing-page-dot-1" fill="#01B6D1" x="24" y="27" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-2" fill="#01B6D1" x="24" y="31" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-3" fill="#01B6D1" x="24" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-4" fill="#01B6D1" x="28" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-5" fill="#01B6D1" x="32" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-6" fill="#01B6D1" x="36" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-7" fill="#01B6D1" x="40" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-8" fill="#01B6D1" x="44" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-9" fill="#01B6D1" x="48" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-10" fill="#01B6D1" x="52" y="35" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-11" fill="#01B6D1" x="52" y="31" width="2" height="2"></rect>
+    <rect id="indexing-page-dot-12" fill="#01B6D1" x="52" y="27" width="2" height="2"></rect>
+  </g>
+  <style>
+    #indexing-laptop-left {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: dashTransform 300ms 0ms linear forwards;
+    }
+    #indexing-laptop-right {
+      stroke-dasharray: 52;
+      stroke-dashoffset: 52;
+      animation: dashTransform 300ms 0ms linear forwards;
+    }
+    #indexing-laptop-base {
+      stroke-dasharray: 168;
+      stroke-dashoffset: 168;
+      animation: dashTransform 675ms 0ms linear forwards;
+    }
+    #indexing-slit {
+      stroke-dasharray: 36;
+      stroke-dashoffset: 36;
+      animation: dashTransform 300ms 0ms linear forwards;
+    }
+    #indexing-page-line-1 {
+      stroke-dasharray: 12;
+      stroke-dashoffset: 12;
+      transform: translateY(-10px);
+      animation: dashTransform 675ms 0ms linear forwards;
+    }
+    #indexing-page-line-2 {
+      stroke-dasharray: 12;
+      stroke-dashoffset: 12;
+      transform: translateY(-10px);
+      animation: dashTransform 675ms 0ms linear forwards;
+    }
+    #indexing-page-main {
+      stroke-dasharray: 70;
+      stroke-dashoffset: 70;
+      transform: scaleY(1.25);
+      transform-origin: 50% 28px;
+      animation: dashTransform 675ms 0ms linear forwards;
+    }
+    rect[id|='indexing-page-dot'] {
+      opacity: 0;
+      animation: dashTransform 0ms 0ms linear forwards;
+    }
+    #indexing-page-dot-12 { animation-delay: 725ms }
+    #indexing-page-dot-11 { animation-delay: 750ms }
+    #indexing-page-dot-10 { animation-delay: 775ms }
+    #indexing-page-dot-9 { animation-delay: 800ms }
+    #indexing-page-dot-8 { animation-delay: 825ms }
+    #indexing-page-dot-7 { animation-delay: 850ms }
+    #indexing-page-dot-6 { animation-delay: 875ms }
+    #indexing-page-dot-5 { animation-delay: 900ms }
+    #indexing-page-dot-4 { animation-delay: 925ms }
+    #indexing-page-dot-3 { animation-delay: 950ms }
+    #indexing-page-dot-2 { animation-delay: 975ms }
+    #indexing-page-dot-1 { animation-delay: 1000ms }
+    @keyframes dashTransform {
+      to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        transform: scaleX(1) scaleY(1) translateX(0) translateY(0);
+      }
+    }
+  </style>
 </svg>

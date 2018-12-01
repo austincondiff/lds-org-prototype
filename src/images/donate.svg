@@ -1,4 +1,61 @@
 <svg width="61px" height="71px" viewBox="0 0 61 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M44.1171003,52 L48,52 L48,71 L17,71 L17,52 L21.3778595,52 L15.5400633,40.3178147 C14.4943647,38.2252366 14.5630854,35.7486099 15.723214,33.7172384 L18.1293788,29.5040722 L19.8661063,30.4959278 L17.4599415,34.709094 C16.6312782,36.1600736 16.582192,37.9290927 17.3291196,39.4237914 L23.6136752,52 L41.8828997,52 L42.5474602,50.6652965 C43.5001336,48.7519468 43.9959646,46.6436808 43.9959646,44.5062773 C43.9959646,42.3220164 43.6021474,40.1556497 42.8334112,38.111135 L41,33.2350328 L41,21.546471 C41,20.1588642 39.8751224,19.0339866 38.4875156,19.0339866 C37.0999087,19.0339866 35.9750311,20.1588642 35.9750311,21.546471 L35.9750311,33.3862918 L32.2077242,38.4147849 L30.6071036,37.2156127 L33.9750311,32.7201999 L33.9750311,21.546471 C33.9750311,19.0542947 35.9953392,17.0339866 38.4875156,17.0339866 C40.9796919,17.0339866 43,19.0542947 43,21.546471 L43,32.8714589 L44.7054538,37.4072483 C45.5588016,39.6767942 45.9959646,42.0816039 45.9959646,44.5062773 C45.9959646,46.9530396 45.4283691,49.3664472 44.3378097,51.5567271 L44.1171003,52 Z M19,54 L19,69 L46,69 L46,54 L19,54 Z M39,62 L39,60 L42,60 L42,62 L39,62 Z M39,60 L42,60 L42,62 L39,62 L39,60 Z" id="Combined-Shape" fill="#01B6D1"></path>
-  <path d="M3.41421356,2 L9.41421356,8 L51.5857864,8 L55,4.58578644 L56.4142136,6 L52.4142136,10 L8.58578644,10 L2,3.41421356 L2,29 L29.0507808,29 L29.0507808,31 L0,31 L0,0 L61,0 L61,31 L43,31 L43,29 L59,29 L59,2 L3.41421356,2 Z" id="Combined-Shape" fill="#FFB81C"></path>
+  <g id="donate-line-icon" fill="none" transform="translate(1.000000, 1.000000)" stroke-width="2">
+    <rect id="donate-sleeve" stroke="#01B6D1" x="17" y="52" width="29" height="17"></rect>
+    <path id="donate-button" d="M38,60 L41,60 L38,60 Z" stroke="#01B6D1"></path>
+    <path id="donate-hand" d="M17.9977426,29 L15.5915777,33.2131662 C14.5971818,34.9543418 14.5382784,37.0771646 15.4345914,38.870803 L21.9954852,52" stroke="#01B6D1"></path>
+    <path id="donate-thumb" d="M31.007,36.0148885 L33.9750311,32.0532459 L33.9750311,20.546471 C33.9750311,18.6065794 35.547624,17.0339866 37.4875156,17.0339866 L37.4875156,17.0339866 C39.4274071,17.0339866 41,18.6065794 41,20.546471 L41,32.0532459 L42.7694325,36.7591916 C43.5804745,38.916222 43.9959646,41.2018101 43.9959646,43.5062773 L43.9959646,43.5062773 C43.9959646,45.7983602 43.4642514,48.059197 42.4426349,50.1110118 L42,51" stroke="#01B6D1" stroke-linecap="square"></path>
+    <polyline id="donate-envelope" stroke="#FFB81C" points="28.0507808 29 0 29 0 0 59 0 59 29 42 29"></polyline>
+    <polyline id="donate-flap" stroke="#FFB81C" stroke-linecap="square" points="1 1 8 8 51 8 54 5"></polyline>
+  </g>
+  <style>
+    #donate-sleeve {
+      <!-- stroke-dasharray: 104;
+      stroke-dashoffset: -104; -->
+      transform: scaleY(0);
+      transform-origin: 50% 100%;
+      animation: dashGrow 1000ms 0ms linear forwards;
+    }
+    #donate-button {
+      stroke-dasharray: 6;
+      stroke-dashoffset: 6;
+      transform: translateY(16px);
+      animation: dashUp 1000ms 0ms linear forwards;
+    }
+    #donate-hand {
+      stroke-dasharray: 38;
+      stroke-dashoffset: -38;
+      transform: translateY(19px);
+      animation: dashUp 1000ms 0ms linear forwards;
+    }
+    #donate-thumb {
+      stroke-dasharray: 72;
+      stroke-dashoffset: -72;
+      transform: translateY(19px);
+      animation: dashUp 1000ms 0ms linear forwards;
+    }
+    #donate-envelope {
+      stroke-dasharray: 175;
+      stroke-dashoffset: -175;
+      transform: translateY(19px);
+      animation: dashUp 1000ms 0ms linear forwards;
+    }
+    #donate-flap {
+      stroke-dasharray: 70;
+      stroke-dashoffset: 70;
+      transform: translateY(6px);
+      animation: dashUp 300ms 700ms linear forwards;
+    }
+    @keyframes dashGrow {
+      to {
+        stroke-dashoffset: 0;
+        transform: scaleY(1)
+      }
+    }
+    @keyframes dashUp {
+      to {
+        stroke-dashoffset: 0;
+        transform: translateY(0)
+      }
+    }
+  </style>
 </svg>

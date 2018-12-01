@@ -1,4 +1,54 @@
-<svg width="75px" height="65px" viewBox="0 0 75 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M9.00476828,41.9546952 L16.6567487,36 L22.995387,36 L22.995387,38 L17.3432513,38 L7.00476828,46.0453048 L7.00476828,38 L-6.99440506e-15,38 L-7.10542736e-15,-1.10134124e-13 L52,-1.10134124e-13 L52,19 L50,19 L50,2 L2,2 L2,36 L9.00476828,36 L9.00476828,41.9546952 Z M24.9999999,37.9997437 L25.0043567,55 L58.3432513,55 L65.9952317,60.9546952 L65.9952317,55 L73,55 L73,21 L52,21 L52,19 L75,19 L75,57 L67.9952317,57 L67.9952317,65.0453048 L57.6567487,57 L23.0048692,57 L23,38.0002563 L24.9999999,37.9997437 Z" id="Combined-Shape" fill="#01B6D1"></path>
-  <path d="M31,36 L50,36 L50,21 L25,21 L25,38 L23,38 L23,19 L52,19 L52,38 L31,38 L31,36 Z M30,27 L33,27 L33,30 L30,30 L30,27 Z M36,27 L39,27 L39,30 L36,30 L36,27 Z M42,27 L45,27 L45,30 L42,30 L42,27 Z" id="Combined-Shape" fill="#8DB344"></path>
+<svg width="75px" fill="none" height="65px" viewBox="0 0 75 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="chat-line-icon" transform="translate(1, 1)">
+    <polyline id="chat-bubble-1" stroke="#01B6D1" stroke-width="2" points="21.995387 36 16 36 7.00476828 43 7.00476828 36 0 36 0 1.49186219e-16 50 1.49186219e-16 50 18"></polyline>
+    <polyline id="chat-bubble-2" stroke="#01B6D1" stroke-width="2" transform="translate(48.000000, 40.500000) scale(-1, 1) translate(-48.000000, -40.500000) " points="73 37 72.995387 55 39 55 30.0047683 62 30.0047683 55 23 55 23 19 45 19"></polyline>
+    <polyline id="chat-overlap-1" stroke="#8DB344" stroke-width="2" transform="translate(40.000000, 27.000000) scale(-1, 1) translate(-40.000000, -27.000000) " points="50 36 30 36 30 18"></polyline>
+    <polyline id="chat-overlap-2" stroke="#8DB344" stroke-width="2" transform="translate(37.000000, 28.000000) scale(-1, 1) translate(-37.000000, -28.000000) " points="23 19 51 19 51 37"></polyline>
+    <rect id="chat-ellipsis-1" fill="#8DB344" x="29" y="26" width="3" height="3"></rect>
+    <rect id="chat-ellipsis-2" fill="#8DB344" x="35" y="26" width="3" height="3"></rect>
+    <rect id="chat-ellipsis-3" fill="#8DB344" x="41" y="26" width="3" height="3"></rect>
+  </g>
+  <style>
+    #chat-bubble-1 {
+      stroke-dasharray: 137;
+      stroke-dashoffset: -137;
+      animation: dash 1000ms 300ms linear forwards;
+    }
+    #chat-overlap-1 {
+      stroke-dasharray: 40;
+      stroke-dashoffset: 40;
+      animation: dash 300ms linear forwards;
+    }
+    #chat-bubble-2 {
+      stroke-dasharray: 140;
+      stroke-dashoffset: -140;
+      animation: dash 1000ms 300ms linear forwards;
+    }
+    #chat-overlap-2 {
+      stroke-dasharray: 50;
+      stroke-dashoffset: -50;
+      animation: dash 300ms linear forwards;
+    }
+    #chat-ellipsis-1 {
+      transform: scale(0);
+      transform-origin: 30.5px 27.5px;
+      animation: grow 300ms 400ms linear forwards;
+    }
+    #chat-ellipsis-2 {
+      transform: scale(0);
+      transform-origin: 36.5px 27.5px;
+      animation: grow 300ms 700ms linear forwards;
+    }
+    #chat-ellipsis-3 {
+      transform: scale(0);
+      transform-origin: 42.5px 27.5px;
+      animation: grow 300ms 1000ms linear forwards;
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 0 }
+    }
+    @keyframes grow {
+      to { transform: scale(1) }
+    }
+  </style>
 </svg>
