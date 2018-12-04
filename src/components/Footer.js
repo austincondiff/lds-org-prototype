@@ -36,7 +36,7 @@ const Footer = ({ siteTitle }) => (
                 style={{
                   fontFamily: 'proxima-nova, sans-serif',
                   fontWeight: '600',
-                  fontSize: '15px',
+                  fontSize: '14px',
                   color: 'rgba(0,0,0,0.44)',
                   textTransform: 'uppercase',
                 }}
