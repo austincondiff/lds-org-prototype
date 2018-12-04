@@ -1,4 +1,5 @@
 import account from './account.svg'
+import filter from './filter.svg'
 import earth from './earth.svg'
 import language from './language.svg'
 import magnify from './magnify.svg'
@@ -12,6 +13,7 @@ import youtube from './youtube.svg'
 
 export default {
   account,
+  filter,
   earth,
   language,
   magnify,

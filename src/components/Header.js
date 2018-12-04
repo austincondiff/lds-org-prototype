@@ -49,6 +49,12 @@ const SearchInput = styled.input`
     color: black;
   }
 `
+const SearchSelectInputWrap = styled(InputWrap)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+`
 const Select = styled.select`
   appearance: none;
   background-color: #F1FBFC;
@@ -90,7 +96,8 @@ class Header extends React.Component {
       menuMode: null,
       activeNavItem: null,
       region: 'US',
-      language: 'EN'
+      language: 'EN',
+      searchMode: 'everything'
     }
     this.searchInputRef = React.createRef()
   }
@@ -111,7 +118,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const { scrollTop, activeNavItem, menuMode, language, region } = this.state
+    const { scrollTop, activeNavItem, menuMode, language, region, searchMode } = this.state
 
     return (
       <div
@@ -519,10 +526,24 @@ class Header extends React.Component {
                     />
                     <SearchInput
                       type="text"
-                      placeholder="Search everything"
+                      placeholder={`Search ${searchMode}`}
                       autofocus="true"
                       ref={this.searchInputRef}
                     />
+                    <SearchSelectInputWrap>
+                      <SelectIcon name="filter" />
+                      <Select value={searchMode} onChange={e => this.setState({ searchMode: e.target.value })}>
+                        <option value="everything">Everything</option>
+                        <option value="scriptures">Scriptures</option>
+                        <option value="general conference">General Conference</option>
+                        <option value="magazines">Magazines</option>
+                        <option value="videos">Videos</option>
+                        <option value="images">Images</option>
+                        <option value="topics">Topics</option>
+                        <option value="news">News</option>
+                      </Select>
+                      <SelectDropdownArrow />
+                    </SearchSelectInputWrap>
                   </InputWrap>
                 </MenuColumn>
               </MenuColumnWrap>
