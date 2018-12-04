@@ -11,12 +11,12 @@ const MenuColumn = styled.div`
 `
 const MenuColumnWrap = styled.div`
   margin: 0 -16px 0 -16px;
-  display: flex
+  display: flex;
 `
 const MenuDescription = styled.div`
   font-family: adobe-garamond-pro, Garamond, Georgia, serif;
   font-size: 28px;
-  color: #0096AC;
+  color: #0096ac;
   line-height: 32px;
   align-self: center;
 `
@@ -24,9 +24,10 @@ const DropdownArrow = styled.span`
   display: inline-block;
   width: 6px;
   height: 6px;
-  border-left: 1.5px solid rgba(0,0,0,0.33);
-  border-bottom: 1.5px solid rgba(0,0,0,0.33);
-  transform: ${props => props.active ? 'rotate(-225deg) translate(2px, -2px)' : 'rotate(-45deg)'};
+  border-left: 1.5px solid rgba(0, 0, 0, 0.33);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.33);
+  transform: ${props =>
+    props.active ? 'rotate(-225deg) translate(2px, -2px)' : 'rotate(-45deg)'};
   margin: -5px 0 0 10px;
   transition: 150ms;
 `
@@ -57,10 +58,10 @@ const SearchSelectInputWrap = styled(InputWrap)`
 `
 const Select = styled.select`
   appearance: none;
-  background-color: #F1FBFC;
+  background-color: #f1fbfc;
   border-radius: 64px;
   border: 2px solid #01b6d1;
-  padding: 8px 16px 8px 48px;
+  padding: 8px 48px;
   outline: 0;
   width: 100%;
   font-family: proxima-nova, sans-serif;
@@ -68,7 +69,7 @@ const Select = styled.select`
   font-weight: 600;
   color: #006184;
   &:invalid {
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
   }
 `
 const SelectIcon = styled(Icon)`
@@ -97,7 +98,7 @@ class Header extends React.Component {
       activeNavItem: null,
       region: 'US',
       language: 'EN',
-      searchMode: 'everything'
+      searchMode: 'everything',
     }
     this.searchInputRef = React.createRef()
   }
@@ -118,7 +119,14 @@ class Header extends React.Component {
   }
 
   render() {
-    const { scrollTop, activeNavItem, menuMode, language, region, searchMode } = this.state
+    const {
+      scrollTop,
+      activeNavItem,
+      menuMode,
+      language,
+      region,
+      searchMode,
+    } = this.state
 
     return (
       <div
@@ -212,7 +220,7 @@ class Header extends React.Component {
                           textAlign: 'left',
                           textDecoration: 'none',
                           cursor: 'pointer',
-                          display: 'flex'
+                          display: 'flex',
                         }}
                         onClick={() =>
                           this.setState({
@@ -357,7 +365,9 @@ class Header extends React.Component {
             {menuMode === 'nav' && (
               <MenuColumnWrap>
                 <MenuColumn>
-                  <MenuDescription>{activeNavItem && activeNavItem.description}</MenuDescription>
+                  <MenuDescription>
+                    {activeNavItem && activeNavItem.description}
+                  </MenuDescription>
                 </MenuColumn>
                 {activeNavItem &&
                   activeNavItem.categories.map((cat, catI) => (
@@ -408,15 +418,25 @@ class Header extends React.Component {
             {menuMode === 'language' && (
               <MenuColumnWrap>
                 <MenuColumn noFlex>
-                  <MenuDescription>To every nation, kindred, tongue, and people</MenuDescription>
+                  <MenuDescription>
+                    To every nation, kindred, tongue, and people
+                  </MenuDescription>
                 </MenuColumn>
                 <MenuColumn>
                   <InputWrap>
                     <SelectIcon name="language" />
-                    <Select required value={language} onChange={e => this.setState({ language: e.target.value })}>
-                        {data.languages.map(l => (
-                          <option key={`language-${l.value}`} value={l.value}>{l.label}</option>
-                        ))}
+                    <Select
+                      required
+                      value={language}
+                      onChange={e =>
+                        this.setState({ language: e.target.value })
+                      }
+                    >
+                      {data.languages.map(l => (
+                        <option key={`language-${l.value}`} value={l.value}>
+                          {l.label}
+                        </option>
+                      ))}
                     </Select>
                     <SelectDropdownArrow />
                   </InputWrap>
@@ -424,9 +444,15 @@ class Header extends React.Component {
                 <MenuColumn>
                   <InputWrap>
                     <SelectIcon name="pin" />
-                    <Select required value={region} onChange={e => this.setState({ region: e.target.value })}>
+                    <Select
+                      required
+                      value={region}
+                      onChange={e => this.setState({ region: e.target.value })}
+                    >
                       {data.regions.map(r => (
-                        <option key={`region-${r.value}`} value={r.value}>{r.label}</option>
+                        <option key={`region-${r.value}`} value={r.value}>
+                          {r.label}
+                        </option>
                       ))}
                     </Select>
                     <SelectDropdownArrow />
@@ -437,7 +463,9 @@ class Header extends React.Component {
             {menuMode === 'account' && (
               <MenuColumnWrap>
                 <MenuColumn>
-                  <MenuDescription>Be anxiously engaged in a good cause</MenuDescription>
+                  <MenuDescription>
+                    Be anxiously engaged in a good cause
+                  </MenuDescription>
                 </MenuColumn>
                 {data.account.categories.map((cat, catI) => (
                   <MenuColumn key={`cat${catI}`}>
@@ -527,15 +555,22 @@ class Header extends React.Component {
                     <SearchInput
                       type="text"
                       placeholder={`Search ${searchMode}`}
-                      autofocus="true"
+                      autoFocus
                       ref={this.searchInputRef}
                     />
                     <SearchSelectInputWrap>
                       <SelectIcon name="filter" />
-                      <Select value={searchMode} onChange={e => this.setState({ searchMode: e.target.value })}>
+                      <Select
+                        value={searchMode}
+                        onChange={e =>
+                          this.setState({ searchMode: e.target.value })
+                        }
+                      >
                         <option value="everything">Everything</option>
                         <option value="scriptures">Scriptures</option>
-                        <option value="general conference">General Conference</option>
+                        <option value="general conference">
+                          General Conference
+                        </option>
                         <option value="magazines">Magazines</option>
                         <option value="videos">Videos</option>
                         <option value="images">Images</option>

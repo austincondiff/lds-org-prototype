@@ -35,9 +35,14 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: '0 auto',
-            paddingTop: 128,
           }}
         >
+          <div
+            style={{
+              height: 128,
+              backgroundColor: '#eff0f0',
+            }}
+          />
           {children}
         </div>
         <CallToAction
