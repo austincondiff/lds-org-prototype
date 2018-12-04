@@ -1,9 +1,11 @@
 import account from './account.svg'
 import earth from './earth.svg'
+import language from './language.svg'
 import magnify from './magnify.svg'
 import facebook from './facebook.svg'
 import twitter from './twitter.svg'
 import instagram from './instagram.svg'
+import pin from './pin.svg'
 import pinterest from './pinterest.svg'
 import tumblr from './tumblr.svg'
 import youtube from './youtube.svg'
@@ -11,10 +13,12 @@ import youtube from './youtube.svg'
 export default {
   account,
   earth,
+  language,
   magnify,
   facebook,
   twitter,
   instagram,
+  pin,
   pinterest,
   tumblr,
   youtube,

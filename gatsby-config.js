@@ -4,6 +4,7 @@ module.exports = {
     title: 'The Church of Jesus Christ of Latter-day Saints',
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-svg',
     'gatsby-transformer-remark',

@@ -4,6 +4,14 @@ import Logo from '../images/logo.svg'
 import footerData from '../data/footer'
 import Icon from '../components/Icon'
 
+const styles = {
+  socialLink: {
+    display: 'inline-block',
+    margin: '8px',
+    color: 'black',
+  },
+}
+
 const Footer = ({ siteTitle }) => (
   <div>
     <div style={{ background: '#F7F8F8' }}>
@@ -77,40 +85,22 @@ const Footer = ({ siteTitle }) => (
             <Logo />
           </Link>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="facebook" />
             </Link>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="twitter" />
             </Link>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="instagram" />
             </Link>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="pinterest" />
             </Link>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="youtube" />
             </Link>
-            <Link
-              to="share/facebook"
-              style={{ display: 'inline-block', margin: '8px' }}
-            >
+            <Link to="share/facebook" style={styles.socialLink}>
               <Icon name="tumblr" />
             </Link>
           </div>
