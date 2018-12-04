@@ -164,19 +164,19 @@ class Template extends React.Component {
             >
               <Link
                 to="share/facebook"
-                style={{ display: 'block', margin: '16px 0' }}
+                style={{ display: 'block', margin: '16px 0', color: 'black' }}
               >
                 <Icon name="twitter" />
               </Link>
               <Link
                 to="share/facebook"
-                style={{ display: 'block', margin: '16px 0' }}
+                style={{ display: 'block', margin: '16px 0', color: 'black' }}
               >
                 <Icon name="facebook" />
               </Link>
               <Link
                 to="share/facebook"
-                style={{ display: 'block', margin: '4px 0' }}
+                style={{ display: 'block', margin: '4px 0', color: 'black' }}
               >
                 <Icon name="pinterest" />
               </Link>
