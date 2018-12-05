@@ -637,6 +637,10 @@ pre tt:after {
   }
 }
 
+#headerInside {
+  height: 128px;
+}
+
 .post-content h2 {
   margin-top: 2.25rem;
 }

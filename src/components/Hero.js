@@ -20,38 +20,35 @@ class Hero extends React.Component {
     this.heroRef = React.createRef()
   }
 
+  scrollTop = 0
+  heroHeight = null
+
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
-    window.addEventListener('resize', this.handleResize.bind(this))
-    this.setState({
-      scrollTop: document.documentElement.scrollTop,
-      heroHeight:
-        this.heroRef &&
-        this.heroRef.current &&
-        this.heroRef.current.clientHeight,
-    })
+    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize)
+    this.setHeroHeight()
+    this.setScrollStyles()
   }
 
-  handleScroll() {
-    window.requestAnimationFrame(() => {
-      this.setState({ scrollTop: document.documentElement.scrollTop })
-    })
+  handleScroll = () => window.requestAnimationFrame(this.setScrollStyles)
+
+  setHeroHeight = () => {
+    this.heroHeight =
+      this.heroRef && this.heroRef.current && this.heroRef.current.clientHeight
   }
 
-  handleResize() {
-    window.requestAnimationFrame(() => {
-      this.setState({
-        heroHeight:
-          this.heroRef &&
-          this.heroRef.current &&
-          this.heroRef.current.clientHeight,
-      })
-    })
+  setScrollStyles = () => {
+    this.scrollTop = document.documentElement.scrollTop
+    const coverImageEl = document.getElementById('heroCoverImage')
+
+    coverImageEl.style.backgroundPosition = `50% ${33 -
+      ((this.scrollTop / this.heroHeight) * 100) / 3}%`
   }
+
+  handleResize = () => this.setHeroHeight()
 
   render() {
     const { title, subtitle, excerpt, image, category, link } = this.props
-    const { scrollTop, heroHeight } = this.state
 
     return (
       <Transition in appear timeout={{ enter: 0 }}>
@@ -78,6 +75,7 @@ class Hero extends React.Component {
               ref={this.heroRef}
             >
               <div
+                id="heroCoverImage"
                 style={{
                   position: 'absolute',
                   top: 0,
@@ -86,8 +84,6 @@ class Hero extends React.Component {
                   left: 0,
                   backgroundImage: `url(${image})`,
                   backgroundSize: 'cover',
-                  backgroundPosition: `50% ${33 -
-                    ((scrollTop / heroHeight) * 100) / 3}%`,
                   transform: 'scale(1.25)',
                   opacity: 0,
                   transition: 'opacity 2000ms, transform 2000ms',

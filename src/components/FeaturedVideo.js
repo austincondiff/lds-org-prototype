@@ -1,6 +1,52 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 import QuoteIcon from '../images/quote.svg'
+
+const LayoutWrap = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 64px 0;
+`
+const VideoWrap = styled.div`
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  cursor: ${props => props.video && 'pointer'};
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px;
+  transition: 300ms ease-in-out;
+  background-color: black;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 16px;
+  }
+`
+const CoverImageWrap = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+`
+const CoverImage = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.01);
+  transition: 300ms ease-in-out;
+  ${VideoWrap}:hover & {
+    opacity: 0.75;
+    transform: scale(1.075);
+  }
+`
 
 class FeaturedVideo extends React.Component {
   constructor() {
@@ -13,29 +59,16 @@ class FeaturedVideo extends React.Component {
     const { showVideo } = this.state
 
     return (
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 1200,
-          display: 'flex',
-          alignItems: 'center',
-          padding: '64px 0',
-        }}
-      >
-        <div
-          style={{
-            width: '100%',
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            paddingTop: '56.25%',
-            position: 'relative',
-            cursor: video && 'pointer',
-          }}
+      <LayoutWrap>
+        <VideoWrap
+          video={video}
           onClick={() =>
             video && !showVideo && this.setState({ showVideo: true })
           }
         >
+          <CoverImageWrap>
+            <CoverImage src={image} />
+          </CoverImageWrap>
           {video &&
             (showVideo ? (
               <iframe
@@ -126,8 +159,8 @@ class FeaturedVideo extends React.Component {
                 </div>
               </div>
             ))}
-        </div>
-      </div>
+        </VideoWrap>
+      </LayoutWrap>
     )
   }
 }

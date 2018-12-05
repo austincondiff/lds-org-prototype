@@ -1,5 +1,28 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const Post = styled.div`
+  padding: 16px;
+  display: flex;
+  width: ${props => (props.large ? '50%' : '33%')};
+`
+
+const Image = styled(Link)`
+  width: ${props => (props.large ? 200 : 160)}px;
+  height: ${props => (props.large ? 200 : 160)}px;
+  display: block;
+  background-image: url(${props => props.src});
+  background-position: center;
+  background-size: cover;
+  margin-right: ${props => (props.large ? 24 : 16)}px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px;
+  transition: 150ms;
+  ${Post}:hover & {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 16px;
+  }
+`
 
 const Posts = ({ posts, large }) => {
   return (
@@ -7,27 +30,12 @@ const Posts = ({ posts, large }) => {
       {posts.map(({ node: post }) => {
         const { frontmatter } = post
         return (
-          <div
-            style={{
-              padding: 16,
-              display: 'flex',
-              width: large ? '50%' : '33%',
-            }}
-            key={post.id}
-          >
+          <Post large={large} key={post.id}>
             <div>
-              <Link
+              <Image
                 to={frontmatter.path}
-                style={{
-                  width: large ? 200 : 160,
-                  height: large ? 200 : 160,
-                  display: 'block',
-                  backgroundImage: `url(${frontmatter.image})`,
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                  marginRight: large ? 24 : 16,
-                  position: 'relative',
-                }}
+                src={frontmatter.image}
+                large={large}
               >
                 {frontmatter.video && (
                   <span
@@ -45,7 +53,7 @@ const Posts = ({ posts, large }) => {
                     }}
                   />
                 )}
-              </Link>
+              </Image>
             </div>
             <div>
               <Link
@@ -98,7 +106,7 @@ const Posts = ({ posts, large }) => {
                 </p>
               )}
             </div>
-          </div>
+          </Post>
         )
       })}
     </div>

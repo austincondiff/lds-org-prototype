@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
           padding: 48,
           maxWidth: 1296,
           borderTop: '3px solid #01B6D1',
-          boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+          boxShadow: 'rgba(0, 0, 0, 0.15) 0px 12px 24px 0px',
           margin: '-48px auto 64px auto',
           position: 'relative',
         }}

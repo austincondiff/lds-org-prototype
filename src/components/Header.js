@@ -93,7 +93,6 @@ class Header extends React.Component {
   constructor() {
     super()
     this.state = {
-      scrollTop: false,
       menuMode: null,
       activeNavItem: null,
       region: 'US',
@@ -104,7 +103,9 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
+    window.addEventListener('scroll', this.handleScroll)
+
+    this.setScrollStyles()
   }
 
   componentDidUpdate() {
@@ -112,10 +113,20 @@ class Header extends React.Component {
       this.searchInputRef.current.focus()
   }
 
-  handleScroll() {
-    window.requestAnimationFrame(() => {
-      this.setState({ scrollTop: document.documentElement.scrollTop })
-    })
+  handleScroll = () => window.requestAnimationFrame(this.setScrollStyles)
+
+  setScrollStyles = () => {
+    const scrollTop = document.documentElement.scrollTop
+    const wrapEl = document.getElementById('headerWrap')
+    const insideEl = document.getElementById('headerInside')
+    const menuEl = document.getElementById('headerMenu')
+
+    wrapEl.style.boxShadow =
+      scrollTop > 48
+        ? 'rgba(0, 0, 0, 0.15) 0px 16px 32px'
+        : 'rgba(0, 0, 0, 0.05) 0px 0px 0px'
+    insideEl.style.height = `${scrollTop < 48 ? 128 - scrollTop : 80}px`
+    menuEl.style.paddingTop = `${scrollTop < 48 ? scrollTop / 2 : 24}px`
   }
 
   render() {
@@ -139,19 +150,19 @@ class Header extends React.Component {
         }}
       >
         <div
+          id="headerWrap"
           style={{
             background: '#EFF0F0',
-            boxShadow: scrollTop > 48 && '0 4px 4px 0 rgba(0,0,0,0.25)',
             transition: '200ms',
             position: 'relative',
             zIndex: 530,
           }}
         >
           <div
+            id="headerInside"
             style={{
               margin: '0 auto',
               maxWidth: 1200,
-              height: scrollTop < 48 ? 128 - scrollTop : 80,
               alignItems: 'center',
               position: 'relative',
             }}
@@ -340,6 +351,7 @@ class Header extends React.Component {
           onClick={() => this.setState({ menuMode: null, activeNavItem: null })}
         />
         <div
+          id="headerMenu"
           style={{
             position: 'absolute',
             zIndex: 530,
@@ -347,9 +359,8 @@ class Header extends React.Component {
             left: 0,
             right: 0,
             backgroundColor: '#EFF0F0',
-            paddingTop: scrollTop < 48 ? scrollTop / 2 : 24,
             paddingBottom: 32,
-            boxShadow: '0 4px 4px 0 rgba(0,0,0,0.25)',
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 16px 32px',
             opacity: menuMode ? 1 : 0,
             pointerEvents: !menuMode && 'none',
             transition: 'transform 150ms, opacity 150ms',
