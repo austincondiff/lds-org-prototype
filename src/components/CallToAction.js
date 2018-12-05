@@ -1,8 +1,27 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 import Logo from '../images/logo.svg'
 import footerData from '../data/footer'
 import Icon from '../components/Icon'
+
+const Button = styled(Link)`
+  background: #01b6d1;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 32px;
+  border-radius: 64px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0;
+  transition: 150ms;
+  &:hover {
+    background-color: #03a5bd;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 8px 16px;
+  }
+`
 
 const Footer = ({ title, description, buttonLabel, path }) => (
   <div style={{ background: '#7DE3F4' }}>
@@ -42,22 +61,7 @@ const Footer = ({ title, description, buttonLabel, path }) => (
         </p>
       </div>
       <div>
-        <Link
-          style={{
-            background: '#01B6D1',
-            fontFamily: 'proxima-nova, sans-serif',
-            fontWeight: '600',
-            fontSize: '20px',
-            color: '#FFFFFF',
-            textAlign: 'center',
-            textDecoration: 'none',
-            padding: '20px 32px',
-            borderRadius: 64,
-          }}
-          to={path}
-        >
-          {buttonLabel}
-        </Link>
+        <Button to={path}>{buttonLabel}</Button>
       </div>
     </div>
   </div>

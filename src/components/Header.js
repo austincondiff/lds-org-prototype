@@ -58,7 +58,7 @@ const SearchSelectInputWrap = styled(InputWrap)`
 `
 const Select = styled.select`
   appearance: none;
-  background-color: #f1fbfc;
+  background-color: #e7fbfd;
   border-radius: 64px;
   border: 2px solid #01b6d1;
   padding: 8px 48px;
@@ -68,6 +68,13 @@ const Select = styled.select`
   font-size: 14px;
   font-weight: 600;
   color: #006184;
+  transition: 150ms;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0;
+  &:hover {
+    background-color: #daf7fb;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 8px 16px;
+  }
   &:invalid {
     color: rgba(0, 0, 0, 0.5);
   }
@@ -87,6 +94,25 @@ const SelectDropdownArrow = styled(DropdownArrow)`
   top: 22px;
   right: 22px;
   pointer-events: none;
+`
+const Button = styled.button`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  text-align: left;
+  padding: 8px 24px;
+  background-color: #01b6d1;
+  border: 0;
+  outline: 0;
+  border-radius: 64px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0;
+  transition: 150ms;
+  cursor: pointer;
+  &:hover {
+    background-color: #03a5bd;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 8px 16px;
+  }
 `
 
 class Header extends React.Component {
@@ -533,22 +559,7 @@ class Header extends React.Component {
                       alignItems: 'center',
                     }}
                   >
-                    <button
-                      style={{
-                        fontFamily: 'proxima-nova, sans-serif',
-                        fontWeight: '700',
-                        fontSize: '16px',
-                        color: 'white',
-                        textAlign: 'left',
-                        padding: '8px 24px',
-                        backgroundColor: '#01b6d1',
-                        border: 0,
-                        outline: 0,
-                        borderRadius: 64,
-                      }}
-                    >
-                      Sign In
-                    </button>
+                    <Button>Sign In</Button>
                   </div>
                 </MenuColumn>
               </MenuColumnWrap>
