@@ -9,5 +9,5 @@ yarn start
 ## 💫 Deploy
 
 ```
-yarn run deplo
-y```
+yarn run deploy
+```
