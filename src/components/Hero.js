@@ -30,6 +30,11 @@ class Hero extends React.Component {
     this.setScrollStyles()
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleResize)
+  }
+
   handleScroll = () => window.requestAnimationFrame(this.setScrollStyles)
 
   setHeroHeight = () => {
