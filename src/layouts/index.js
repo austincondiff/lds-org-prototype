@@ -14,6 +14,7 @@ const NavSpacer = styled.div`
   background-color: #eff0f0;
   @media (max-width: 1295px) {
     height: 80px;
+    background-color: transparent;
   }
   @media (max-width: 599px) {
     height: 64px;
