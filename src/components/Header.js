@@ -287,6 +287,7 @@ const MenuButtonWrap = styled.div`
   display: none;
   align-items: center;
   @media (max-width: 1023px) {
+    margin: 0;
     display: flex;
     flex: 1;
   }
