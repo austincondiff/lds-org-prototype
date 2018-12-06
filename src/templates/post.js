@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
@@ -6,6 +7,184 @@ import Layout from '../layouts'
 import Icon from '../components/Icon'
 import ContributorBio from '../components/Contributor'
 import Posts from '../components/Posts'
+
+const LayoutWrap = styled.div`
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px 48px 48px;
+  @media (max-width: 599px) {
+    padding: 24px;
+  }
+`
+const Category = styled(Link)`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #22282e;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 4px;
+  @media (max-width: 599px) {
+    font-size: 12px;
+  }
+`
+const Title = styled.h2`
+  font-family: adobe-garamond-pro Garamond, Georgia, serif;
+  font-size: 48px;
+  color: #0096ac;
+  text-align: left;
+  line-height: 1.1;
+  font-weight: normal;
+  margin-bottom: 20px;
+  @media (max-width: 599px) {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+`
+const Subtitle = styled.p`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #22282e;
+  text-align: left;
+  margin: 0;
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
+`
+const CoverImage = styled.div`
+  width: 100%;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position: center;
+  padding-top: 40%;
+  position: relative;
+  ${props => props.hasVideo && 'cursor: pointer;'}
+  @media (max-width: 599px) {
+    padding-top: 56.25%;
+  }
+`
+const YouTubeVideo = styled.iframe`
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+`
+const PlayIndicator = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 24px 40px;
+  background-color: rgba(1, 182, 209, 0.8);
+  border-radius: 3px;
+  box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.5);
+`
+const PlayIcon = styled.div`
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 24px solid #fff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+`
+const Article = styled.article`
+  max-width: 896px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 48px;
+  @media (max-width: 599px) {
+    padding: 24px;
+  }
+`
+const SocialLinks = styled.div`
+  position: sticky;
+  margin-left: -196px;
+  top: 128px;
+  height: 128px;
+  width: 32px;
+`
+const SocialLink = styled(Link)`
+  display: block;
+  margin: 16px 0;
+  color: black;
+`
+const ArticleContent = styled.div`
+  margin-top: -128px;
+`
+const Tags = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: -8px;
+`
+const Tag = styled.li`
+  margin: 4px;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+`
+const TagLink = styled(Link)`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #22282e;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  background-color: #ddd;
+  text-decoration: none;
+`
+const PostNav = styled.div`
+  display: flex;
+  margin-top: 64px;
+`
+const PostNavLinkWrap = styled.div`
+  width: 50%;
+  line-height: 1;
+  ${props => props.right && 'text-align: right;'}
+`
+const PostNavLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1l;
+`
+const PostNavLinkLabel = styled.span`
+  display: block;
+  opacity: 0.5;
+  margin-bottom: 8px;
+`
+const PostNavLinkTitle = styled.span`
+  display: block;
+`
+const RelatedPosts = styled(LayoutWrap)`
+  dispaly: block;
+`
+const RelatedPostsTitle = styled.h3`
+  font-family: adobe-garamond-pro, Garamond, Georgia, serif;
+  font-size: 32px;
+  color: #000000;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 48px;
+`
 
 class Template extends React.Component {
   constructor() {
@@ -39,80 +218,24 @@ class Template extends React.Component {
         <Helmet title={`${title} - LDS.org`} />
         <div>
           <header style={{ backgroundColor: '#eff0f0' }}>
-            <div
-              style={{ maxWidth: 1200, margin: '0 auto', paddingBottom: 48 }}
-            >
-              <a
-                style={{
-                  fontFamily: 'proxima-nova, sans-serif',
-                  fontWeight: '700',
-                  fontSize: '14px',
-                  color: '#22282E',
-                  letterSpacing: '1px',
-                  textAlign: 'left',
-                  textTransform: 'uppercase',
-                }}
-              >
-                {category}
-              </a>
-              <h2
-                style={{
-                  fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
-                  fontSize: '48px',
-                  color: '#0096AC',
-                  textAlign: 'left',
-                  lineHeight: '52px',
-                  fontWeight: 'normal',
-                  marginBottom: 20,
-                }}
-              >
-                {title}
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'proxima-nova, sans-serif',
-                  fontWeight: '300',
-                  fontSize: '20px',
-                  color: '#22282E',
-                  textAlign: 'left',
-                  margin: 0,
-                }}
-              >
-                {subtitle}
-              </p>
-            </div>
+            <LayoutWrap>
+              <Category>{category}</Category>
+              <Title>{title}</Title>
+              <Subtitle>{subtitle}</Subtitle>
+            </LayoutWrap>
           </header>
-          <div
-            style={{
-              width: '100%',
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              paddingTop: '40%',
-              position: 'relative',
-              cursor: video && 'pointer',
-            }}
+          <CoverImage
+            src={image}
+            hasVideo={video}
             onClick={() =>
               video && !showVideo && this.setState({ showVideo: true })
             }
           >
             {video &&
               (showVideo ? (
-                <iframe
+                <YouTubeVideo
                   title="youtube"
                   frameborder="0"
-                  style={{
-                    overflow: 'hidden',
-                    overflowX: 'hidden',
-                    overflowY: 'hidden',
-                    height: '100%',
-                    width: '100%',
-                    position: 'absolute',
-                    top: '0px',
-                    left: '0px',
-                    right: '0px',
-                    bottom: '0px',
-                  }}
                   height="100%"
                   width="100%"
                   src={`https://www.youtube.com/embed/${video}?autoplay=1`}
@@ -120,199 +243,64 @@ class Template extends React.Component {
                   allowfullscreen
                 />
               ) : (
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translateX(-50%) translateY(-50%)',
-                    padding: '24px 40px',
-                    backgroundColor: 'rgba(1,182,209,0.8)',
-                    borderRadius: 3,
-                    boxShadow: '0px 0px 64px rgba(0,0,0,0.5)',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'block',
-                      position: 'relative',
-                      zIndex: '3',
-                      width: '0',
-                      height: '0',
-                      borderLeft: '24px solid #fff',
-                      borderTop: '14px solid transparent',
-                      borderBottom: '14px solid transparent',
-                    }}
-                  />
-                </div>
+                <PlayIndicator>
+                  <PlayIcon />
+                </PlayIndicator>
               ))}
-          </div>
-          <div
-            style={{
-              maxWidth: 800,
-              margin: '64px auto',
-            }}
-          >
-            <div
-              style={{
-                position: 'sticky',
-                marginLeft: -196,
-                top: 128,
-                height: 128,
-                width: 32,
-              }}
-            >
-              <Link
-                to="share/facebook"
-                style={{ display: 'block', margin: '16px 0', color: 'black' }}
-              >
+          </CoverImage>
+          <Article>
+            <SocialLinks>
+              <SocialLink to="share/facebook">
                 <Icon name="twitter" />
-              </Link>
-              <Link
-                to="share/facebook"
-                style={{ display: 'block', margin: '16px 0', color: 'black' }}
-              >
+              </SocialLink>
+              <SocialLink to="share/facebook">
                 <Icon name="facebook" />
-              </Link>
-              <Link
-                to="share/facebook"
-                style={{ display: 'block', margin: '4px 0', color: 'black' }}
-              >
+              </SocialLink>
+              <SocialLink to="share/facebook">
                 <Icon name="pinterest" />
-              </Link>
-            </div>
-            <div
-              style={{ marginTop: -128 }}
+              </SocialLink>
+            </SocialLinks>
+            <ArticleContent
               className="post-content"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <ul
-              style={{
-                margin: 0,
-                padding: 0,
-                listStyle: 'none',
-                marginLeft: -8,
-              }}
-            >
+            <Tags>
               {tags.map(tag => (
-                <li
-                  style={{
-                    margin: 4,
-                    padding: 0,
-                    listStyle: 'none',
-                    display: 'inline-block',
-                  }}
-                  key={tag}
-                >
-                  <Link
-                    to={`/tags/${tag}`}
-                    style={{
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontWeight: '700',
-                      fontSize: '13px',
-                      color: '#22282E',
-                      letterSpacing: '1px',
-                      textAlign: 'left',
-                      textTransform: 'uppercase',
-                      padding: '6px 8px',
-                      backgroundColor: '#ddd',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    {tag}
-                  </Link>
-                </li>
+                <Tag key={tag}>
+                  <TagLink to={`/tags/${tag}`}>{tag}</TagLink>
+                </Tag>
               ))}
-            </ul>
+            </Tags>
             {(prev || next) && (
-              <div style={{ display: 'flex', marginTop: 64 }}>
-                <div style={{ width: '50%', lineHeight: '1' }}>
+              <PostNav>
+                <PostNavLinkWrap>
                   {prev && (
-                    <Link
-                      style={{
-                        color: 'black',
-                        textDecoration: 'none',
-                        fontFamily: 'proxima-nova, sans-serif',
-                        fontWeight: '700',
-                        textTransform: 'uppercase',
-                        fontSize: '12px',
-                        letterSpacing: '1px',
-                        lineHeight: '1',
-                      }}
-                      to={prev.frontmatter.path}
-                    >
-                      <span
-                        style={{
-                          display: 'block',
-                          opacity: 0.5,
-                          marginBottom: 8,
-                        }}
-                      >
-                        ◀ Previous
-                      </span>
-                      <span style={{ display: 'block' }}>
+                    <PostNavLink to={prev.frontmatter.path}>
+                      <PostNavLinkLabel>◀ Previous</PostNavLinkLabel>
+                      <PostNavLinkTitle>
                         {prev.frontmatter.title}
-                      </span>
-                    </Link>
+                      </PostNavLinkTitle>
+                    </PostNavLink>
                   )}
-                </div>
-                <div
-                  style={{ width: '50%', lineHeight: '1', textAlign: 'right' }}
-                >
+                </PostNavLinkWrap>
+                <PostNavLinkWrap right>
                   {next && (
-                    <Link
-                      style={{
-                        color: 'black',
-                        textDecoration: 'none',
-                        fontFamily: 'proxima-nova, sans-serif',
-                        fontWeight: '700',
-                        textTransform: 'uppercase',
-                        fontSize: '12px',
-                        letterSpacing: '1px',
-                        lineHeight: '1.25',
-                      }}
-                      to={next.frontmatter.path}
-                    >
-                      <span
-                        style={{
-                          display: 'block',
-                          opacity: 0.5,
-                          marginBottom: 8,
-                        }}
-                      >
-                        Next ▶
-                      </span>
-                      <span style={{ display: 'block' }}>
+                    <PostNavLink to={next.frontmatter.path}>
+                      <PostNavLinkLabel>Next ▶</PostNavLinkLabel>
+                      <PostNavLinkTitle>
                         {next.frontmatter.title}
-                      </span>
-                    </Link>
+                      </PostNavLinkTitle>
+                    </PostNavLink>
                   )}
-                </div>
-              </div>
+                </PostNavLinkWrap>
+              </PostNav>
             )}
-          </div>
+          </Article>
           <ContributorBio username={contributor} />
-          <div
-            style={{
-              maxWidth: 1200,
-              margin: '0 auto',
-              padding: '64px 0',
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: 'adobe-garamond-pro, Garamond, Georgia, serif',
-                fontSize: '32px',
-                color: '#000000',
-                textAlign: 'center',
-                fontWeight: 'normal',
-                marginBottom: 48,
-              }}
-            >
-              Related Posts
-            </h3>
+          <RelatedPosts>
+            <RelatedPostsTitle>Related Posts</RelatedPostsTitle>
             <Posts posts={relatedPosts} />
-          </div>
+          </RelatedPosts>
         </div>
       </Layout>
     )

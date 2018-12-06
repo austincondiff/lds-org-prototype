@@ -1,5 +1,5 @@
-<svg width="65px" height="74px" viewBox="0 0 65 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="family-search-line-icon" fill="none" stroke-width="2">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="family-search-line-icon" transform="translate(8.5, 4)" fill="none" stroke-width="2">
     <path id="fs-trunk" d="M41,73 C25.6666667,63.3330938 22.3333333,48.9997604 31,30 L29,30 C18.4680994,40.2656301 16.1883479,57.100242 30,73 L41,73 Z" stroke="#01B6D1"></path>
     <path id="fs-branch-1" d="M28,57.1189306 C31.0647831,57.4103755 34.2647737,55.5870617 37.5999718,51.6489891" stroke="#01B6D1" stroke-linecap="square"></path>
     <path id="fs-branch-2" d="M20.4451827,46.236074 C16.0006072,44.4471835 13.7783195,41.7124668 13.7783195,38.0319239" stroke="#01B6D1"></path>

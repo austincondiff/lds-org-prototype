@@ -1,5 +1,5 @@
-<svg width="66px" height="62px" viewBox="0 0 66 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="calendar-line-icon" fill="none" transform="translate(1, 1)" stroke-width="2">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="calendar-line-icon" fill="none" transform="translate(8, 10)" stroke-width="2">
     <polyline id="calendar-body" stroke="#01B6D1" points="-2.70117262e-13 16 1.84741111e-13 60 64 60 64 20"></polyline>
     <polyline id="calendar-head-bottom" stroke="#FC4E6D" stroke-linecap="square" points="-1.56541446e-13 15 64 15 64 5 54 5"></polyline>
     <polyline id="calendar-head-left" stroke="#FC4E6D" stroke-linecap="square" points="14 5 -1.71612724e-13 5 -1.71612724e-13 9.06891395"></polyline>

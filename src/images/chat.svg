@@ -1,5 +1,5 @@
-<svg width="75px" fill="none" height="65px" viewBox="0 0 75 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="chat-line-icon" transform="translate(1, 1)">
+<svg width="80px" fill="none" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="chat-line-icon" transform="translate(3.5, 8.5)">
     <polyline id="chat-bubble-1" stroke="#01B6D1" stroke-width="2" points="21.995387 36 16 36 7.00476828 43 7.00476828 36 0 36 0 1.49186219e-16 50 1.49186219e-16 50 18"></polyline>
     <polyline id="chat-bubble-2" stroke="#01B6D1" stroke-width="2" transform="translate(48.000000, 40.500000) scale(-1, 1) translate(-48.000000, -40.500000) " points="73 37 72.995387 55 39 55 30.0047683 62 30.0047683 55 23 55 23 19 45 19"></polyline>
     <polyline id="chat-overlap-1" stroke="#8DB344" stroke-width="2" transform="translate(40.000000, 27.000000) scale(-1, 1) translate(-40.000000, -27.000000) " points="50 36 30 36 30 18"></polyline>

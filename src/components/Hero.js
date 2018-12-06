@@ -1,6 +1,129 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Transition from 'react-transition-group/Transition'
+
+const HeroWrap = styled(Link)`
+  display: block;
+  width: 100%;
+  background-color: #333;
+  padding-top: 40%;
+  position: relative;
+  @media (max-width: 1023px) {
+    margin: 48px 48px 0 48px;
+    width: auto;
+  }
+  @media (max-width: 599px) {
+    padding-top: 55%;
+    font-size: 24px;
+    margin: 24px 24px 0 24px;
+  }
+`
+const TextProtection = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  @media (max-width: 1023px) {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0) 80%
+    );
+  }
+`
+const TextLayoutWrap = styled.div`
+  max-width: 1296px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 128px 48px;
+  @media (max-width: 1295px) {
+    padding: 4% 48px;
+  }
+  @media (max-width: 599px) {
+    padding: 4% 24px;
+  }
+`
+const TextLayout = styled.div`
+  width: 50%;
+  @media (max-width: 1023px) {
+    width: auto;
+  }
+`
+const PostCategory = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 7px 8px 5px 8px;
+  background-color: #01b6d1;
+  display: inline-block;
+  align-self: flex-start;
+  line-height: 1;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    padding: 5px 6px 3px 6px;
+  }
+`
+const PostTitle = styled.div`
+  font-family: adobe-garamond-pro, Garamond, Georgia, serif;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1;
+  margin: 12px 0;
+  @media (max-width: 1295px) {
+    font-size: 40px;
+  }
+  @media (max-width: 1023px) {
+    font-size: 32px;
+  }
+  @media (max-width: 599px) {
+    font-size: 24px;
+  }
+`
+const PostSubtitle = styled.div`
+  opacity: 0.9;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  @media (max-width: 1023px) {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  @media (max-width: 599px) {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 1;
+  }
+`
+const PostExcerpt = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 1.25;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+`
 
 const styles = {
   coverImg: {
@@ -58,16 +181,7 @@ class Hero extends React.Component {
     return (
       <Transition in appear timeout={{ enter: 0 }}>
         {state => (
-          <Link
-            to={link}
-            style={{
-              display: 'block',
-              width: '100%',
-              backgroundColor: `#333`,
-              paddingTop: '40%',
-              position: 'relative',
-            }}
-          >
+          <HeroWrap to={link}>
             <div
               style={{
                 position: 'absolute',
@@ -96,17 +210,7 @@ class Hero extends React.Component {
                 }}
               />
             </div>
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0,
-                backgroundImage:
-                  'linear-gradient(to right, rgba(0,0,0,0.5) 20%,rgba(0,0,0,0) 80%)',
-              }}
-            />
+            <TextProtection />
             <div
               style={{
                 position: 'absolute',
@@ -120,78 +224,16 @@ class Hero extends React.Component {
                 ...styles.contentWrap[state],
               }}
             >
-              <div
-                style={{
-                  width: 1200,
-                  height: '100%',
-                  margin: '0 auto',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'flex-end',
-                  padding: '128px 0',
-                }}
-              >
-                <div style={{ width: '50%' }}>
-                  <div
-                    style={{
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontWeight: '700',
-                      fontSize: '14px',
-                      color: '#FFFFFF',
-                      textAlign: 'left',
-                      textTransform: 'uppercase',
-                      padding: '7px 8px 5px 8px',
-                      backgroundColor: '#01B6D1',
-                      display: 'inline-block',
-                      alignSelf: 'flex-start',
-                      lineHeight: '1',
-                    }}
-                  >
-                    {category}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily:
-                        'adobe-garamond-pro, Garamond, Georgia, serif',
-                      fontSize: '48px',
-                      color: '#FFFFFF',
-                      textAlign: 'left',
-                      lineHeight: '1',
-                      margin: '12px 0',
-                    }}
-                  >
-                    {title}
-                  </div>
-                  <div
-                    style={{
-                      opacity: '0.9',
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontWeight: '300',
-                      fontSize: '24px',
-                      color: '#FFFFFF',
-                      textAlign: 'left',
-                      lineHeight: '1.25',
-                      marginBottom: 40,
-                    }}
-                  >
-                    {subtitle}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontSize: '18px',
-                      color: '#FFFFFF',
-                      letterSpacing: '0',
-                      textAlign: 'left',
-                      lineHeight: '1.25',
-                    }}
-                  >
-                    {excerpt}
-                  </div>
-                </div>
-              </div>
+              <TextLayoutWrap>
+                <TextLayout>
+                  <PostCategory>{category}</PostCategory>
+                  <PostTitle>{title}</PostTitle>
+                  <PostSubtitle>{subtitle}</PostSubtitle>
+                  <PostExcerpt>{excerpt}</PostExcerpt>
+                </TextLayout>
+              </TextLayoutWrap>
             </div>
-          </Link>
+          </HeroWrap>
         )}
       </Transition>
     )

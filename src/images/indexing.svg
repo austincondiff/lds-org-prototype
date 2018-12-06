@@ -1,5 +1,5 @@
-<svg width="78px" height="80px" viewBox="0 0 78 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="indexing-line-icon" fill="none" transform="translate(1.000000, 8.000000)">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="indexing-line-icon" fill="none" transform="translate(2, 8)">
     <path id="indexing-laptop-left" d="M6,55 L6,22 C6,19.790861 7.790861,18 10,18 L18,18" stroke="#01B6D1" stroke-width="2" stroke-linecap="square"></path>
     <path id="indexing-laptop-right" d="M71,55 L71,22 C71,19.790861 69.209139,18 67,18 L55,18" stroke="#01B6D1" stroke-width="2" stroke-linecap="square"></path>
     <path id="indexing-laptop-base" d="M0,55 L28,55 L28,55 C28,56.6568542 29.3431458,58 31,58 L46,58 C47.6568542,58 49,56.6568542 49,55 L76,55 L76,59 C76,61.209139 74.209139,63 72,63 L4,63 C1.790861,63 2.705415e-16,61.209139 0,59 L0,55 Z" stroke="#01B6D1" stroke-width="2"></path>

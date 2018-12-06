@@ -1,5 +1,5 @@
-<svg width="78px" height="62px" viewBox="0 0 78 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="study-line-icon" fill="none" transform="translate(1, 1)" stroke-width="2">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="study-line-icon" fill="none" transform="translate(2, 10)" stroke-width="2">
     <path id="study-book-left-inside" d="M24.0298885,9 L30,9 C34.418278,9 38,12.581722 38,17 L38,60" stroke="#01B6D1"></path>
     <polyline id="study-book-left-ouside" stroke="#01B6D1" points="30.2001 60 5.5067062e-14 60 5.5067062e-14 9 12.0381354 9"></polyline>
     <path id="study-book-left-lip" d="M6,50 L30,50 C34.418278,50 38,53.581722 38,58 L38,60.7907591 L38,61" stroke="#01B6D1"></path>

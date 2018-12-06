@@ -3,6 +3,7 @@ import filter from './filter.svg'
 import earth from './earth.svg'
 import language from './language.svg'
 import magnify from './magnify.svg'
+import menu from './menu.svg'
 import facebook from './facebook.svg'
 import twitter from './twitter.svg'
 import instagram from './instagram.svg'
@@ -17,6 +18,7 @@ export default {
   earth,
   language,
   magnify,
+  menu,
   facebook,
   twitter,
   instagram,

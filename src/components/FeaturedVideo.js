@@ -5,10 +5,17 @@ import QuoteIcon from '../images/quote.svg'
 
 const LayoutWrap = styled.div`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1296px;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 64px 0;
+  padding: 64px 48px;
+  @media (max-width: 1295px) {
+    padding: 48px;
+  }
+  @media (max-width: 599px) {
+    padding: 24px;
+  }
 `
 const VideoWrap = styled.div`
   width: 100%;
@@ -45,6 +52,82 @@ const CoverImage = styled.div`
   ${VideoWrap}:hover & {
     opacity: 0.75;
     transform: scale(1.075);
+  }
+`
+const VideoMetaWrap = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  display: flex;
+  padding: 48px 64px;
+  align-items: flex-end;
+  @media (max-width: 767px) {
+    padding: 24px 32px;
+  }
+  @media (max-width: 599px) {
+    padding: 16px 24px;
+  }
+`
+const Title = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: #ffffff;
+  line-height: 1;
+  @media (max-width: 1023px) {
+    font-size: 32px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+`
+const Subtitle = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-top: 8px;
+  @media (max-width: 1023px) {
+    font-size: 16px;
+  }
+  @media (max-width: 599px) {
+    display: none;
+  }
+`
+const PlayIndicator = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 24px 40px;
+  background-color: rgba(1, 182, 209, 0.8);
+  border-radius: 3px;
+  box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.5);
+  @media (max-width: 767px) {
+    padding: 12px 20px;
+  }
+`
+const PlayIcon = styled.div`
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-left: 24px solid #fff;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  @media (max-width: 767px) {
+    border-left: 12px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
   }
 `
 
@@ -93,71 +176,15 @@ class FeaturedVideo extends React.Component {
                 allowfullscreen
               />
             ) : (
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  backgroundImage:
-                    'linear-gradient(to top, rgba(0,0,0,0.5) 20%,rgba(0,0,0,0) 80%)',
-                  display: 'flex',
-                  padding: '48px 64px',
-                  alignItems: 'flex-end',
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translateX(-50%) translateY(-50%)',
-                    padding: '24px 40px',
-                    backgroundColor: 'rgba(1,182,209,0.8)',
-                    borderRadius: 3,
-                    boxShadow: '0px 0px 64px rgba(0,0,0,0.5)',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'block',
-                      position: 'relative',
-                      zIndex: '3',
-                      width: '0',
-                      height: '0',
-                      borderLeft: '24px solid #fff',
-                      borderTop: '14px solid transparent',
-                      borderBottom: '14px solid transparent',
-                    }}
-                  />
-                </div>
+              <VideoMetaWrap>
+                <PlayIndicator>
+                  <PlayIcon />
+                </PlayIndicator>
                 <div>
-                  <div
-                    style={{
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontWeight: '700',
-                      fontSize: '40px',
-                      color: '#FFFFFF',
-                      lineHeight: '32px',
-                    }}
-                  >
-                    {title}
-                  </div>
-                  <div
-                    style={{
-                      fontFamily: 'proxima-nova, sans-serif',
-                      fontWeight: '300',
-                      fontSize: '20px',
-                      color: '#FFFFFF',
-                      lineHeight: '32px',
-                      marginTop: '8px',
-                    }}
-                  >
-                    {subtitle}
-                  </div>
+                  <Title>{title}</Title>
+                  <Subtitle>{subtitle}</Subtitle>
                 </div>
-              </div>
+              </VideoMetaWrap>
             ))}
         </VideoWrap>
       </LayoutWrap>

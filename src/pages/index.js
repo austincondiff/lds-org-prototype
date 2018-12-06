@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Layout from '../layouts'
@@ -7,6 +8,42 @@ import Posts from '../components/Posts'
 import DailyScripture from '../components/DailyScripture'
 import FeaturedVideo from '../components/FeaturedVideo'
 import QuickLinks from '../components/QuickLinks'
+
+const FeaturedPostsWrap = styled.div`
+  background-color: #f7f8f8;
+  padding: 48px;
+  max-width: 1296px;
+  width: 100%;
+  border-top: 3px solid #01b6d1;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 24px 0px;
+  margin: -48px auto 64px auto;
+  position: relative;
+  @media (max-width: 1295px) {
+    margin-top: 0;
+  }
+  @media (max-width: 1023px) {
+    background-color: transparent;
+    border: 0;
+    box-shadow: transparent 0 0 0 0;
+    margin-bottom: 0;
+  }
+  @media (max-width: 599px) {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+`
+const RecentPosts = styled.div`
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 48px 128px 48px;
+  @media (max-width: 1295px) {
+    padding: 48px;
+  }
+  @media (max-width: 599px) {
+    padding: 24px;
+  }
+`
 
 const IndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark
@@ -28,19 +65,9 @@ const IndexPage = ({ data }) => {
           link={heroPost.frontmatter.path}
         />
       )}
-      <div
-        style={{
-          backgroundColor: '#F7F8F8',
-          padding: 48,
-          maxWidth: 1296,
-          borderTop: '3px solid #01B6D1',
-          boxShadow: 'rgba(0, 0, 0, 0.15) 0px 12px 24px 0px',
-          margin: '-48px auto 64px auto',
-          position: 'relative',
-        }}
-      >
+      <FeaturedPostsWrap>
         <Posts large posts={featuredPosts} />
-      </div>
+      </FeaturedPostsWrap>
       <QuickLinks />
       <FeaturedVideo
         title="Mormon Messages: Gathering the Family of God"
@@ -52,15 +79,9 @@ const IndexPage = ({ data }) => {
         scripture="And he shall turn the heart of the fathers to the children and the heart of the children to their fathers…"
         reference="Malachi 4:6"
       />
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '64px 0 128px 0',
-        }}
-      >
+      <RecentPosts>
         <Posts posts={recentPosts} />
-      </div>
+      </RecentPosts>
     </Layout>
   )
 }

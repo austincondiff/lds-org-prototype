@@ -5,9 +5,145 @@ import Logo from '../images/logo.svg'
 import data from '../data/navigation'
 import Icon from './Icon'
 
+const HeaderLayout = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+`
+const HeaderWrap = styled.div`
+  background: #eff0f0;
+  transition: 200ms;
+  position: relative;
+  z-index: 530;
+`
+const HeaderInside = styled.div`
+  margin: 0 auto;
+  max-width: 1296px;
+  width: 100%;
+  padding: 0 48px;
+  align-items: center;
+  position: relative;
+  @media (max-width: 1295px) {
+    height: 80px !important;
+  }
+  @media (max-width: 599px) {
+    height: 64px !important;
+    padding: 0 24px;
+  }
+`
+const HeaderContent = styled.div`
+  position: absolute;
+  display: flex;
+  top: 30%;
+  right: 48px;
+  bottom: 30%;
+  left: 48px;
+  @media (max-width: 599px) {
+    top: 25%;
+    right: 24px;
+    bottom: 25%;
+    left: 24px;
+  }
+`
+const NavItemsWrap = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: -16px;
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 1295px) {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex: 1;
+  }
+  @media (max-width: 1023px) {
+    display: none;
+  }
+`
+const NavItem = styled.div`
+  display: inline-block;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: ${props =>
+    props.activeNavItem && props.itemId === props.activeNavItem.id
+      ? '#0096AC'
+      : '#22282E'};
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  @media (max-width: 1295px) {
+    font-size: 12px;
+  }
+  @media (max-width: 899px) {
+    font-size: 12px;
+  }
+`
+const IconsWrap = styled.div`
+  padding: 8px 0 8px 32px;
+  margin-left: 32px;
+  display: inline-block;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  @media (max-width: 1295px) {
+    padding: 0;
+    margin-left: 8px;
+    border: 0;
+  }
+`
+const MenuShade = styled.div`
+  position: fixed;
+  z-index: 510;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(239, 240, 240, 0.5);
+  opacity: ${props => (props.menuMode ? 1 : 0)};
+  ${props => !props.menuMode && 'pointer-events: none;'}
+  transition: 150ms;
+`
+const Menu = styled.div`
+  position: absolute;
+  z-index: 530;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #eff0f0;
+  padding-bottom: 32px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 16px 32px;
+  opacity: ${props => (props.menuMode ? 1 : 0)};
+  ${props => !props.menuMode && 'pointer-events: none;'}
+  transition: transform 150ms, opacity 150ms;
+  transform: translateY(${props => (props.menuMode ? 0 : -50)}%);
+  @media (max-width: 1295px) {
+    padding-top: 0 !important;
+    padding-bottom: 16px;
+  }
+`
+const MenuContentWrap = styled.div`
+  margin: 0 auto;
+  max-width: 1296px;
+  width: 100%;
+  padding: 0 48px;
+  @media (max-width: 599px) {
+    padding: 0 24px;
+  }
+`
 const MenuColumn = styled.div`
   ${props => !props.noFlex && 'flex: 1;'}
   padding: 0 16px;
+`
+const MenuDescriptionColumn = styled(MenuColumn)`
+  @media (max-width: 1023px) {
+    display: none;
+  }
 `
 const MenuColumnWrap = styled.div`
   margin: 0 -16px 0 -16px;
@@ -30,11 +166,27 @@ const DropdownArrow = styled.span`
     props.active ? 'rotate(-225deg) translate(2px, -2px)' : 'rotate(-45deg)'};
   margin: -5px 0 0 10px;
   transition: 150ms;
+  @media (max-width: 1295px) {
+    display: none;
+  }
+`
+const IconLabel = styled.span`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: ${props => (props.active ? '#0096ac' : '#000000')};
+  margin-left: 8px;
+  @media (max-width: 1295px) {
+    display: none;
+  }
 `
 const InputWrap = styled.div`
   position: relative;
   margin-top: -8px;
   color: #006184;
+  @media (max-width: 767px) {
+    margin: 0;
+  }
 `
 const SearchInput = styled.input`
   border-radius: 64px;
@@ -55,6 +207,9 @@ const SearchSelectInputWrap = styled(InputWrap)`
   top: 0;
   right: 0;
   margin: 0;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `
 const Select = styled.select`
   appearance: none;
@@ -94,6 +249,9 @@ const SelectDropdownArrow = styled(DropdownArrow)`
   top: 22px;
   right: 22px;
   pointer-events: none;
+  @media (max-width: 1295px) {
+    display: inline-block;
+  }
 `
 const Button = styled.button`
   font-family: proxima-nova, sans-serif;
@@ -112,6 +270,58 @@ const Button = styled.button`
   &:hover {
     background-color: #03a5bd;
     box-shadow: rgba(0, 0, 0, 0.1) 0 8px 16px;
+  }
+`
+const NavWrap = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media (max-width: 1023px) {
+    flex: 1;
+  }
+`
+const MenuButtonWrap = styled.div`
+  width: 104px;
+  margin-right: 8px;
+  display: none;
+  align-items: center;
+  @media (max-width: 1023px) {
+    display: flex;
+    flex: 1;
+  }
+`
+const MenuButton = styled.div`
+  align-items: center;
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+`
+const LogoWrap = styled.h1`
+  margin: 0;
+  font-size: 0;
+  height: 100%;
+  display: flex;
+  @media (max-width: 1023px) {
+    flex: 1;
+    justify-content: center;
+  }
+`
+const LanguageButton = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @media (max-width: 599px) {
+    display: none;
+  }
+`
+const AccountButton = styled.div`
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  @media (max-width: 599px) {
+    display: none;
   }
 `
 
@@ -171,44 +381,16 @@ class Header extends React.Component {
     } = this.state
 
     return (
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          right: 0,
-          left: 0,
-          zIndex: 500,
-        }}
-      >
-        <div
-          id="headerWrap"
-          style={{
-            background: '#EFF0F0',
-            transition: '200ms',
-            position: 'relative',
-            zIndex: 530,
-          }}
-        >
-          <div
-            id="headerInside"
-            style={{
-              margin: '0 auto',
-              maxWidth: 1200,
-              alignItems: 'center',
-              position: 'relative',
-            }}
-          >
-            <div
-              style={{
-                position: 'absolute',
-                display: 'flex',
-                top: '30%',
-                right: 0,
-                bottom: '30%',
-                left: 0,
-              }}
-            >
-              <h1 style={{ margin: 0, fontSize: 0, height: '100%' }}>
+      <HeaderLayout>
+        <HeaderWrap id="headerWrap">
+          <HeaderInside id="headerInside">
+            <HeaderContent>
+              <MenuButtonWrap>
+                <MenuButton>
+                  <Icon name="menu" />
+                </MenuButton>
+              </MenuButtonWrap>
+              <LogoWrap>
                 <Link
                   to="/"
                   style={{
@@ -220,25 +402,9 @@ class Header extends React.Component {
                 >
                   <Logo style={{ width: 'auto', height: '100%' }} />
                 </Link>
-              </h1>
-              <nav
-                style={{
-                  flex: '1',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-end',
-                }}
-              >
-                <ul
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    listStyle: 'none',
-                    marginRight: -16,
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                  }}
-                >
+              </LogoWrap>
+              <NavWrap>
+                <NavItemsWrap>
                   {data.navigation.map(n => (
                     <li
                       key={n.id}
@@ -249,21 +415,9 @@ class Header extends React.Component {
                         display: 'inline-block',
                       }}
                     >
-                      <div
-                        style={{
-                          display: 'inline-block',
-                          fontFamily: 'proxima-nova, sans-serif',
-                          fontWeight: '600',
-                          fontSize: '14px',
-                          color:
-                            activeNavItem && n.id === activeNavItem.id
-                              ? '#0096AC'
-                              : '#22282E',
-                          textAlign: 'left',
-                          textDecoration: 'none',
-                          cursor: 'pointer',
-                          display: 'flex',
-                        }}
+                      <NavItem
+                        activeNavItem={activeNavItem}
+                        itemId={n.id}
                         onClick={() =>
                           this.setState({
                             menuMode:
@@ -278,26 +432,12 @@ class Header extends React.Component {
                         }
                       >
                         {n.label}
-                      </div>
+                      </NavItem>
                     </li>
                   ))}
-                </ul>
-                <div
-                  style={{
-                    padding: '8px 0 8px 32px',
-                    marginLeft: 32,
-                    display: 'inline-block',
-                    borderLeft: '1px solid rgba(0,0,0,0.2)',
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}
-                >
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      cursor: 'pointer',
-                    }}
+                </NavItemsWrap>
+                <IconsWrap>
+                  <LanguageButton
                     onClick={() =>
                       this.setState({
                         menuMode: menuMode !== 'language' ? 'language' : null,
@@ -309,26 +449,12 @@ class Header extends React.Component {
                       name="earth"
                       style={{ color: menuMode === 'language' && '#0096ac' }}
                     />
-                    <span
-                      style={{
-                        fontFamily: 'proxima-nova, sans-serif',
-                        fontWeight: '600',
-                        fontSize: '14px',
-                        color: menuMode === 'language' ? '#0096ac' : '#000000',
-                        marginLeft: 8,
-                      }}
-                    >
+                    <IconLabel active={menuMode === 'language'}>
                       {language}/{region}
-                    </span>
+                    </IconLabel>
                     <DropdownArrow active={menuMode === 'language'} />
-                  </div>
-                  <div
-                    style={{
-                      paddingLeft: 16,
-                      display: 'flex',
-                      alignItems: 'center',
-                      cursor: 'pointer',
-                    }}
+                  </LanguageButton>
+                  <AccountButton
                     onClick={() =>
                       this.setState({
                         menuMode: menuMode !== 'account' ? 'account' : null,
@@ -341,7 +467,7 @@ class Header extends React.Component {
                       style={{ color: menuMode === 'account' && '#0096ac' }}
                     />
                     <DropdownArrow active={menuMode === 'account'} />
-                  </div>
+                  </AccountButton>
                   <div
                     style={{
                       paddingLeft: 16,
@@ -361,49 +487,17 @@ class Header extends React.Component {
                       style={{ color: menuMode === 'search' && '#0096ac' }}
                     />
                   </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            position: 'fixed',
-            zIndex: 510,
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-            backgroundColor: 'rgba(239, 240, 240, 0.5)',
-            opacity: menuMode ? 1 : 0,
-            pointerEvents: !menuMode && 'none',
-            transition: '150ms',
-          }}
+                </IconsWrap>
+              </NavWrap>
+            </HeaderContent>
+          </HeaderInside>
+        </HeaderWrap>
+        <MenuShade
+          menuMode={menuMode}
           onClick={() => this.setState({ menuMode: null, activeNavItem: null })}
         />
-        <div
-          id="headerMenu"
-          style={{
-            position: 'absolute',
-            zIndex: 530,
-            top: '100%',
-            left: 0,
-            right: 0,
-            backgroundColor: '#EFF0F0',
-            paddingBottom: 32,
-            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 16px 32px',
-            opacity: menuMode ? 1 : 0,
-            pointerEvents: !menuMode && 'none',
-            transition: 'transform 150ms, opacity 150ms',
-            transform: `translateY(${menuMode ? 0 : -50}%)`,
-          }}
-        >
-          <div
-            style={{
-              margin: '0 auto',
-              maxWidth: 1200,
-            }}
-          >
+        <Menu id="headerMenu" menuMode={menuMode}>
+          <MenuContentWrap>
             {menuMode === 'nav' && (
               <MenuColumnWrap>
                 <MenuColumn>
@@ -459,11 +553,11 @@ class Header extends React.Component {
 
             {menuMode === 'language' && (
               <MenuColumnWrap>
-                <MenuColumn noFlex>
+                <MenuDescriptionColumn noFlex>
                   <MenuDescription>
                     To every nation, kindred, tongue, and people
                   </MenuDescription>
-                </MenuColumn>
+                </MenuDescriptionColumn>
                 <MenuColumn>
                   <InputWrap>
                     <SelectIcon name="language" />
@@ -504,11 +598,11 @@ class Header extends React.Component {
             )}
             {menuMode === 'account' && (
               <MenuColumnWrap>
-                <MenuColumn>
+                <MenuDescriptionColumn>
                   <MenuDescription>
                     Be anxiously engaged in a good cause
                   </MenuDescription>
-                </MenuColumn>
+                </MenuDescriptionColumn>
                 {data.account.categories.map((cat, catI) => (
                   <MenuColumn key={`cat${catI}`}>
                     <h4
@@ -566,9 +660,9 @@ class Header extends React.Component {
             )}
             {menuMode === 'search' && (
               <MenuColumnWrap>
-                <MenuColumn noFlex>
+                <MenuDescriptionColumn noFlex>
                   <MenuDescription>Search, ponder, and pray.</MenuDescription>
-                </MenuColumn>
+                </MenuDescriptionColumn>
                 <MenuColumn>
                   <InputWrap>
                     <Icon
@@ -610,9 +704,9 @@ class Header extends React.Component {
                 </MenuColumn>
               </MenuColumnWrap>
             )}
-          </div>
-        </div>
-      </div>
+          </MenuContentWrap>
+        </Menu>
+      </HeaderLayout>
     )
   }
 }

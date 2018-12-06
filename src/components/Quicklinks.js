@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link } from 'gatsby'
 import QuoteIcon from '../images/quote.svg'
 import MeetingHouseLocatorIcon from '../images/meetinghouse-locator.svg'
@@ -10,29 +11,64 @@ import FamilySearchIcon from '../images/family-search.svg'
 import IndexingIcon from '../images/indexing.svg'
 import ChatIcon from '../images/chat.svg'
 
-const styles = {
-  quicklink: {
-    textAlign: 'center',
-    textDecoration: 'none',
-    fontFamily: 'proxima-nova, sans-serif',
-    fontWeight: '600',
-    fontSize: '16px',
-    color: '#000000',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    lineHeight: '1.25',
-    flex: '1',
-  },
-  quicklinkIconWrap: {
-    display: 'flex',
-    width: 80,
-    height: 80,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  quicklinkLabel: { display: 'block', marginTop: 16 },
-}
+const QuicklinksWrap = styled.div`
+  padding: 48px;
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1023px) {
+    flex-wrap: wrap;
+    padding: 0 48px;
+  }
+  @media (max-width: 599px) {
+    padding: 0 24px;
+  }
+`
+const Quicklink = styled.div`
+  text-align: center;
+  text-decoration: none;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.25;
+  flex: 1;
+  @media (max-width: 1023px) {
+    width: 25%;
+    flex: auto;
+    padding: 4%;
+  }
+  @media (max-width: 767px) {
+    font-size: 12px;
+    & svg {
+      width: 80%;
+      height: auto;
+    }
+  }
+`
+const QuicklinkIconWrap = styled.span`
+  display: flex;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 599px) {
+    width: auto;
+    height: auto;
+  }
+`
+const QuicklinkLabel = styled.span`
+  display: block;
+  margin-top: 16px;
+  @media (max-width: 767px) {
+    margin-bottom: 4px;
+  }
+`
 
 class QuickLinks extends React.Component {
   state = {
@@ -62,84 +98,50 @@ class QuickLinks extends React.Component {
     } = this.state
 
     return (
-      <div
-        style={{
-          padding: '48px 0',
-          maxWidth: 1200,
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Link
-          style={styles.quicklink}
+      <QuicklinksWrap>
+        <Quicklink
           onMouseEnter={() => this.handleMouseOver('meetingHouseLocator')}
         >
-          <span style={styles.quicklinkIconWrap}>
+          <QuicklinkIconWrap>
             {meetingHouseLocator && <MeetingHouseLocatorIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Meetinghouse Locator</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('study')}
-        >
-          <span style={styles.quicklinkIconWrap}>{study && <StudyIcon />}</span>
-          <span style={styles.quicklinkLabel}>Study</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('wardDirectory')}
-        >
-          <span style={styles.quicklinkIconWrap}>
+          </QuicklinkIconWrap>
+          <QuicklinkLabel>Meetinghouse Locator</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('study')}>
+          <QuicklinkIconWrap>{study && <StudyIcon />}</QuicklinkIconWrap>
+          <QuicklinkLabel>Study</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('wardDirectory')}>
+          <QuicklinkIconWrap>
             {wardDirectory && <WardDirectoryIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Ward Directory</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('wardCalendar')}
-        >
-          <span style={styles.quicklinkIconWrap}>
+          </QuicklinkIconWrap>
+          <QuicklinkLabel>Ward Directory</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('wardCalendar')}>
+          <QuicklinkIconWrap>
             {wardCalendar && <WardCalendarIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Ward Calendar</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('donate')}
-        >
-          <span style={styles.quicklinkIconWrap}>
-            {donate && <DonateIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Donate</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('familySearch')}
-        >
-          <span style={styles.quicklinkIconWrap}>
+          </QuicklinkIconWrap>
+          <QuicklinkLabel>Ward Calendar</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('donate')}>
+          <QuicklinkIconWrap>{donate && <DonateIcon />}</QuicklinkIconWrap>
+          <QuicklinkLabel>Donate</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('familySearch')}>
+          <QuicklinkIconWrap>
             {familySearch && <FamilySearchIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Family Search</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('indexing')}
-        >
-          <span style={styles.quicklinkIconWrap}>
-            {indexing && <IndexingIcon />}
-          </span>
-          <span style={styles.quicklinkLabel}>Indexing</span>
-        </Link>
-        <Link
-          style={styles.quicklink}
-          onMouseEnter={() => this.handleMouseOver('chat')}
-        >
-          <span style={styles.quicklinkIconWrap}>{chat && <ChatIcon />}</span>
-          <span style={styles.quicklinkLabel}>Chat With Us</span>
-        </Link>
-      </div>
+          </QuicklinkIconWrap>
+          <QuicklinkLabel>Family Search</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('indexing')}>
+          <QuicklinkIconWrap>{indexing && <IndexingIcon />}</QuicklinkIconWrap>
+          <QuicklinkLabel>Indexing</QuicklinkLabel>
+        </Quicklink>
+        <Quicklink onMouseEnter={() => this.handleMouseOver('chat')}>
+          <QuicklinkIconWrap>{chat && <ChatIcon />}</QuicklinkIconWrap>
+          <QuicklinkLabel>Chat With Us</QuicklinkLabel>
+        </Quicklink>
+      </QuicklinksWrap>
     )
   }
 }

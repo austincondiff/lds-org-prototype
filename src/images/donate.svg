@@ -1,5 +1,5 @@
-<svg width="61px" height="71px" viewBox="0 0 61 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="donate-line-icon" fill="none" transform="translate(1.000000, 1.000000)" stroke-width="2">
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="donate-line-icon" fill="none" transform="translate(11.5, 6.5)" stroke-width="2">
     <rect id="donate-sleeve" stroke="#01B6D1" x="17" y="52" width="29" height="17"></rect>
     <path id="donate-button" d="M38,60 L41,60 L38,60 Z" stroke="#01B6D1"></path>
     <path id="donate-hand" d="M17.9977426,29 L15.5915777,33.2131662 C14.5971818,34.9543418 14.5382784,37.0771646 15.4345914,38.870803 L21.9954852,52" stroke="#01B6D1"></path>
