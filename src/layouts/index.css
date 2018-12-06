@@ -646,7 +646,7 @@ pre tt:after {
 }
 
 .post-content p {
-  font-family: ProximaNova-Regular;
+  font-family: proxima-nova, sans-serif;
   font-size: 20px;
   color: #333333;
   line-height: 32px;
