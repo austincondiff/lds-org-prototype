@@ -64,9 +64,19 @@ const LogoLink = styled(Link)`
     margin-top: 0;
   }
 `
+const SubFooterText = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+  flex: 1;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+`
 const SubFooterLink = styled(Link)`
   opacity: 0.6;
-  font-family: proxima-nova sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-weight: 600;
   font-size: 12px;
   color: #000000;
@@ -162,17 +172,9 @@ const Footer = ({ siteTitle }) => (
     </div>
     <div style={{ background: '#ECECEC' }}>
       <SubFooterLayoutWrap>
-        <div
-          style={{
-            fontFamily: 'proxima-nova, sans-serif',
-            fontWeight: '600',
-            fontSize: '14px',
-            color: '#000000',
-            flex: '1',
-          }}
-        >
+        <SubFooterText>
           © 2018 by Intellectual Reserve, Inc. All rights reserved.
-        </div>
+        </SubFooterText>
         <div>
           <SubFooterLink to="/rights-and-use-information">
             Rights and Use Information (Updated 2016-09-01)
