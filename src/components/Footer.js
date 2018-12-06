@@ -53,6 +53,7 @@ const LogoSocialWrap = styled.div`
   align-items: center;
   @media (max-width: 1023px) {
     order: -1;
+    margin-top: 16px;
     margin-bottom: 32px;
   }
 `
