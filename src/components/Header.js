@@ -318,6 +318,7 @@ const MenuButtonWrap = styled.div`
   }
 `
 const MenuButton = styled.div`
+  transition: 250ms;
   align-items: center;
   @media (max-width: 1023px) {
     display: flex;
@@ -555,7 +556,7 @@ class Header extends React.Component {
                     })
                   }
                 >
-                  <Icon name="menu" />
+                  <Icon name="menu" className={showMobileMenu && 'close'} />
                 </MenuButton>
               </MenuButtonWrap>
               <LogoWrap>
