@@ -839,6 +839,9 @@ class Header extends React.Component {
                       type="text"
                       placeholder={`Search ${searchMode}`}
                       autoFocus
+                      onFocus={e => {
+                        e.preventDefault()
+                      }}
                       ref={this.searchInputRef}
                     />
                     <SearchSelectInputWrap>
