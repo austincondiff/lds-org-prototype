@@ -13,10 +13,19 @@ const HeaderLayout = styled.div`
   z-index: 500;
 `
 const HeaderWrap = styled.div`
-  background: #eff0f0;
-  transition: 200ms;
+  background-color: ${props => (props.showMobileMenu ? 'white' : '#eff0f0')};
+  transition: box-shadow 200ms, background-color 250ms, max-height 250ms;
   position: relative;
   z-index: 530;
+  @media (max-width: 1295px) {
+    max-height: 80px;
+  }
+  @media (max-width: 1023px) {
+    max-height: ${props => (props.showMobileMenu ? '100vh' : '80px')};
+  }
+  @media (max-width: 599px) {
+    max-height: ${props => (props.showMobileMenu ? '100vh' : '64px')};
+  }
 `
 const HeaderInside = styled.div`
   margin: 0 auto;
@@ -105,8 +114,8 @@ const MenuShade = styled.div`
   bottom: 0;
   left: 0;
   background-color: rgba(239, 240, 240, 0.5);
-  opacity: ${props => (props.menuMode ? 1 : 0)};
-  ${props => !props.menuMode && 'pointer-events: none;'}
+  opacity: ${props => (props.show ? 1 : 0)};
+  ${props => !props.show && 'pointer-events: none;'}
   transition: 150ms;
 `
 const Menu = styled.div`
@@ -139,6 +148,16 @@ const MenuContentWrap = styled.div`
 const MenuColumn = styled.div`
   ${props => !props.noFlex && 'flex: 1;'}
   padding: 0 16px;
+  ${props =>
+    props.mobile &&
+    `
+    @media (max-width: 1023px) {
+      padding: 16px;
+      margin: 0;
+      width: 50%;
+      flex: initial;
+    }
+  `}
 `
 const MenuDescriptionColumn = styled(MenuColumn)`
   @media (max-width: 1023px) {
@@ -325,6 +344,118 @@ const AccountButton = styled.div`
     display: none;
   }
 `
+const MenuCategoryLabel = styled.h4`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #8f8f8f;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  @media (max-width: 599px) {
+    font-size: 11px;
+  }
+`
+const MenuCategoryItem = styled.li`
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  @media (max-width: 599px) {
+    font-size: 11px;
+  }
+`
+const MenuCategoryItemLink = styled(Link)`
+  color: #000000;
+  text-decoration: none;
+`
+const MobileMenu = styled.div`
+  display: none;
+  opacity: ${props => (props.show ? 1 : 0)};
+  ${props => !props.show && 'pointer-events: none;'}
+  transition: 250ms;
+  @media (max-width: 1023px) {
+    display: flex;
+    height: calc(100vh - 80px);
+  }
+  @media (max-width: 599px) {
+    height: calc(100vh - 64px);
+  }
+`
+const MobileNavItems = styled.ul`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+`
+const MobileNavItemWrap = styled.li`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: ${props => (props.active ? '#f7f7f7' : 'transparent')};
+  width: 100%;
+  max-height: ${props => (props.active ? '100vh' : '50px')};
+  overflow: hidden;
+  transition: 250ms;
+  @media (max-width: 767px) {
+    max-height: ${props => (props.active ? '100vh' : '48px')};
+  }
+`
+const MobileNavItem = styled.div`
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 48px;
+  width: 100%;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media (max-width: 599px) {
+    padding: 12px 24px;
+  }
+`
+
+const MobileDropdownWrap = styled.div`
+  padding: 0 32px 12px 80px;
+  flex-wrap: wrap;
+  display: flex;
+  @media (max-width: 599px) {
+    padding: 0 8px 12px 56px;
+  }
+`
+
+const PlusMinusToggle = styled.div`
+  cursor: pointer;
+  height: 12px;
+  position: relative;
+  width: 12px;
+  margin-right: 28px;
+  margin-left: 6px;
+  &:before,
+  &:after {
+    background: #000;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 12px;
+    transition: transform 500ms ease;
+  }
+  &:before {
+    transform: rotate(${props => (props.expanded ? 0 : -180)}deg);
+  }
+  &:after {
+    transform: rotate(${props => (props.expanded ? 0 : -90)}deg);
+    transform-origin: center;
+  }
+}
+`
 
 class Header extends React.Component {
   constructor() {
@@ -335,6 +466,8 @@ class Header extends React.Component {
       region: 'US',
       language: 'EN',
       searchMode: 'everything',
+      showMobileMenu: false,
+      mobileMenuActiveItems: [],
     }
     this.searchInputRef = React.createRef()
   }
@@ -379,15 +512,24 @@ class Header extends React.Component {
       language,
       region,
       searchMode,
+      showMobileMenu,
+      mobileMenuActiveItems,
     } = this.state
 
     return (
       <HeaderLayout>
-        <HeaderWrap id="headerWrap">
+        <HeaderWrap showMobileMenu={showMobileMenu} id="headerWrap">
           <HeaderInside id="headerInside">
             <HeaderContent>
               <MenuButtonWrap>
-                <MenuButton>
+                <MenuButton
+                  onClick={() =>
+                    this.setState({
+                      showMobileMenu: !showMobileMenu,
+                      menuMode: null,
+                    })
+                  }
+                >
                   <Icon name="menu" />
                 </MenuButton>
               </MenuButtonWrap>
@@ -480,6 +622,8 @@ class Header extends React.Component {
                       this.setState({
                         menuMode: menuMode !== 'search' ? 'search' : null,
                         activeNavItem: null,
+                        mobileMenuActiveItems: [],
+                        showMobileMenu: false,
                       })
                     }
                   >
@@ -492,9 +636,54 @@ class Header extends React.Component {
               </NavWrap>
             </HeaderContent>
           </HeaderInside>
+
+          <MobileMenu show={showMobileMenu}>
+            <MobileNavItems>
+              {data.navigation.map(n => (
+                <MobileNavItemWrap
+                  active={
+                    mobileMenuActiveItems &&
+                    mobileMenuActiveItems.indexOf(n.id) !== -1
+                  }
+                >
+                  <MobileNavItem
+                    onClick={() =>
+                      this.setState({
+                        mobileMenuActiveItems:
+                          mobileMenuActiveItems.indexOf(n.id) === -1
+                            ? [...mobileMenuActiveItems, n.id]
+                            : mobileMenuActiveItems.filter(m => m !== n.id),
+                      })
+                    }
+                  >
+                    <PlusMinusToggle
+                      expanded={mobileMenuActiveItems.indexOf(n.id) !== -1}
+                    />
+                    {n.label}
+                  </MobileNavItem>
+                  <MobileDropdownWrap>
+                    {n.categories.map((cat, catI) => (
+                      <MenuColumn mobile key={`cat${catI}`}>
+                        <MenuCategoryLabel>{cat.label}</MenuCategoryLabel>
+                        <ul style={{ margin: 0, padding: 0 }}>
+                          {cat.items.map((item, itemI) => (
+                            <MenuCategoryItem key={`navLink${itemI}`}>
+                              <MenuCategoryItemLink to={item.path}>
+                                {item.label}
+                              </MenuCategoryItemLink>
+                            </MenuCategoryItem>
+                          ))}
+                        </ul>
+                      </MenuColumn>
+                    ))}
+                  </MobileDropdownWrap>
+                </MobileNavItemWrap>
+              ))}
+            </MobileNavItems>
+          </MobileMenu>
         </HeaderWrap>
         <MenuShade
-          menuMode={menuMode}
+          show={menuMode || showMobileMenu}
           onClick={() => this.setState({ menuMode: null, activeNavItem: null })}
         />
         <Menu id="headerMenu" menuMode={menuMode}>
@@ -509,42 +698,14 @@ class Header extends React.Component {
                 {activeNavItem &&
                   activeNavItem.categories.map((cat, catI) => (
                     <MenuColumn key={`cat${catI}`}>
-                      <h4
-                        style={{
-                          fontFamily: 'proxima-nova, sans-serif',
-                          fontWeight: '700',
-                          fontSize: '13px',
-                          color: '#8F8F8F',
-                          letterSpacing: '0.1px',
-                          textTransform: 'uppercase',
-                          marginBottom: 16,
-                        }}
-                      >
-                        {cat.label}
-                      </h4>
+                      <MenuCategoryLabel>{cat.label}</MenuCategoryLabel>
                       <ul style={{ margin: 0, padding: 0 }}>
                         {cat.items.map((item, itemI) => (
-                          <li
-                            style={{
-                              margin: '4px 0',
-                              padding: 0,
-                              listStyle: 'none',
-                              fontFamily: 'proxima-nova, sans-serif',
-                              fontWeight: '600',
-                              fontSize: '13px',
-                            }}
-                            key={`navLink${itemI}`}
-                          >
-                            <Link
-                              style={{
-                                color: '#000000',
-                                textDecoration: 'none',
-                              }}
-                              to={item.path}
-                            >
+                          <MenuCategoryItem key={`navLink${itemI}`}>
+                            <MenuCategoryItemLink to={item.path}>
                               {item.label}
-                            </Link>
-                          </li>
+                            </MenuCategoryItemLink>
+                          </MenuCategoryItem>
                         ))}
                       </ul>
                     </MenuColumn>

@@ -175,7 +175,7 @@ const PostNavLinkTitle = styled.span`
   display: block;
 `
 const RelatedPosts = styled(LayoutWrap)`
-  dispaly: block;
+  display: block;
 `
 const RelatedPostsTitle = styled.h3`
   font-family: adobe-garamond-pro, Garamond, Georgia, serif;
