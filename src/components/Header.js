@@ -276,19 +276,25 @@ const Button = styled.button`
   font-family: proxima-nova, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: white;
+  color: ${props => (props.primary ? `white` : `#006184`)};
   text-align: left;
   padding: 8px 24px;
-  background-color: #01b6d1;
-  border: 0;
+  background-color: ${props => (props.primary ? `#01b6d1` : `#e7fbfd`)};
+  border: 2px solid #01b6d1;
   outline: 0;
   border-radius: 64px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 0;
   transition: 150ms;
   cursor: pointer;
+  text-align: center;
   &:hover {
-    background-color: #03a5bd;
+    background-color: ${props => (props.primary ? `#03a5bd` : `#daf7fb`)};
     box-shadow: rgba(0, 0, 0, 0.1) 0 8px 16px;
+  }
+  @media (max-width: 1023px) {
+    font-size: 14px;
+    padding: 5px 24px;
+    width: 100%;
   }
 `
 const NavWrap = styled.div`
@@ -374,11 +380,13 @@ const MenuCategoryItemLink = styled(Link)`
 `
 const MobileMenu = styled.div`
   display: none;
+  padding: 16px 0;
   opacity: ${props => (props.show ? 1 : 0)};
   ${props => !props.show && 'pointer-events: none;'}
   transition: 250ms;
   @media (max-width: 1023px) {
     display: flex;
+    flex-direction: column;
     height: calc(100vh - 80px);
   }
   @media (max-width: 599px) {
@@ -386,7 +394,7 @@ const MobileMenu = styled.div`
   }
 `
 const MobileNavItems = styled.ul`
-  margin: 0;
+  margin: 16px 0;
   padding: 0;
   width: 100%;
 `
@@ -455,6 +463,23 @@ const PlusMinusToggle = styled.div`
     transform-origin: center;
   }
 }
+`
+const LayoutWrap = styled.div`
+  width: 100%;
+  padding: 0 48px;
+  margin: 0 auto;
+  max-width: 1296px;
+  @media (max-width: 599px) {
+    padding: 0 24px;
+  }
+`
+const Row = styled.div`
+  margin: -8px;
+  display: flex;
+`
+const Col = styled.div`
+  flex: 1;
+  padding: 8px;
 `
 
 class Header extends React.Component {
@@ -638,6 +663,16 @@ class Header extends React.Component {
           </HeaderInside>
 
           <MobileMenu show={showMobileMenu}>
+            <LayoutWrap>
+              <Row>
+                <Col>
+                  <Button>Who we are</Button>
+                </Col>
+                <Col>
+                  <Button primary>Sign in</Button>
+                </Col>
+              </Row>
+            </LayoutWrap>
             <MobileNavItems>
               {data.navigation.map(n => (
                 <MobileNavItemWrap
@@ -815,7 +850,7 @@ class Header extends React.Component {
                       alignItems: 'center',
                     }}
                   >
-                    <Button>Sign In</Button>
+                    <Button primary>Sign In</Button>
                   </div>
                 </MenuColumn>
               </MenuColumnWrap>
