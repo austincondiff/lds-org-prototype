@@ -379,6 +379,19 @@ const MenuCategoryItemLink = styled(Link)`
   color: #000000;
   text-decoration: none;
 `
+const MobileMenuWrap = styled.div`
+  display: none;
+  ${props => !props.show && 'pointer-events: none;'}
+  transition: 250ms;
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+  }
+  @media (max-width: 599px) {
+    height: calc(100vh - 64px);
+  }
+`
 const MobileMenu = styled.div`
   display: none;
   padding: 16px 0;
@@ -726,65 +739,67 @@ class Header extends React.Component {
             </HeaderContent>
           </HeaderInside>
 
-          <MobileMenu show={showMobileMenu}>
-            <LayoutWrap>
-              <Row>
-                <Col>
-                  <Button>Who we are</Button>
-                </Col>
-                <Col>
-                  <Button primary>Sign in</Button>
-                </Col>
-              </Row>
-            </LayoutWrap>
-            <MobileNavItems>
-              {data.navigation.map(n => (
-                <MobileNavItemWrap
-                  active={
-                    mobileMenuActiveItems &&
-                    mobileMenuActiveItems.indexOf(n.id) !== -1
-                  }
-                >
-                  <MobileNavItem
-                    onClick={() =>
-                      this.setState({
-                        mobileMenuActiveItems:
-                          mobileMenuActiveItems.indexOf(n.id) === -1
-                            ? [...mobileMenuActiveItems, n.id]
-                            : mobileMenuActiveItems.filter(m => m !== n.id),
-                      })
+          <MobileMenuWrap show={showMobileMenu}>
+            <MobileMenu show={showMobileMenu}>
+              <LayoutWrap>
+                <Row>
+                  <Col>
+                    <Button>Who we are</Button>
+                  </Col>
+                  <Col>
+                    <Button primary>Sign in</Button>
+                  </Col>
+                </Row>
+              </LayoutWrap>
+              <MobileNavItems>
+                {data.navigation.map(n => (
+                  <MobileNavItemWrap
+                    active={
+                      mobileMenuActiveItems &&
+                      mobileMenuActiveItems.indexOf(n.id) !== -1
                     }
                   >
-                    <PlusMinusToggle
-                      expanded={mobileMenuActiveItems.indexOf(n.id) !== -1}
-                    />
-                    {n.label}
-                  </MobileNavItem>
-                  <MobileDropdownWrap>
-                    {n.categories.map((cat, catI) => (
-                      <MenuColumn mobile key={`cat${catI}`}>
-                        <MenuCategoryLabel>{cat.label}</MenuCategoryLabel>
-                        <ul style={{ margin: 0, padding: 0 }}>
-                          {cat.items.map((item, itemI) => (
-                            <MenuCategoryItem key={`navLink${itemI}`}>
-                              <MenuCategoryItemLink to={item.path}>
-                                {item.label}
-                              </MenuCategoryItemLink>
-                            </MenuCategoryItem>
-                          ))}
-                        </ul>
-                      </MenuColumn>
-                    ))}
-                  </MobileDropdownWrap>
-                </MobileNavItemWrap>
-              ))}
-            </MobileNavItems>
+                    <MobileNavItem
+                      onClick={() =>
+                        this.setState({
+                          mobileMenuActiveItems:
+                            mobileMenuActiveItems.indexOf(n.id) === -1
+                              ? [...mobileMenuActiveItems, n.id]
+                              : mobileMenuActiveItems.filter(m => m !== n.id),
+                        })
+                      }
+                    >
+                      <PlusMinusToggle
+                        expanded={mobileMenuActiveItems.indexOf(n.id) !== -1}
+                      />
+                      {n.label}
+                    </MobileNavItem>
+                    <MobileDropdownWrap>
+                      {n.categories.map((cat, catI) => (
+                        <MenuColumn mobile key={`cat${catI}`}>
+                          <MenuCategoryLabel>{cat.label}</MenuCategoryLabel>
+                          <ul style={{ margin: 0, padding: 0 }}>
+                            {cat.items.map((item, itemI) => (
+                              <MenuCategoryItem key={`navLink${itemI}`}>
+                                <MenuCategoryItemLink to={item.path}>
+                                  {item.label}
+                                </MenuCategoryItemLink>
+                              </MenuCategoryItem>
+                            ))}
+                          </ul>
+                        </MenuColumn>
+                      ))}
+                    </MobileDropdownWrap>
+                  </MobileNavItemWrap>
+                ))}
+              </MobileNavItems>
+            </MobileMenu>
             <FlairWrap active={showMobileMenu}>
               <Flair1 active={showMobileMenu} />
               <Flair2 active={showMobileMenu} />
               <Flair3 active={showMobileMenu} />
             </FlairWrap>
-          </MobileMenu>
+          </MobileMenuWrap>
         </HeaderWrap>
         <MenuShade
           show={menuMode || showMobileMenu}
