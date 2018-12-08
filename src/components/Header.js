@@ -22,6 +22,7 @@ const HeaderWrap = styled.div`
   }
   @media (max-width: 1023px) {
     max-height: ${props => (props.showMobileMenu ? '100vh' : '80px')};
+    overflow: hidden;
   }
   @media (max-width: 599px) {
     max-height: ${props => (props.showMobileMenu ? '100vh' : '64px')};
@@ -514,8 +515,8 @@ const FlairWrap = styled.div`
   right: 0;
   bottom: 0;
   opacity: ${props => (props.active ? 1 : 0)};
-  transition: 500ms;
-  transition-delay: 250ms;
+  transition: ${props => (props.active ? 500 : 100)}ms;
+  ${props => props.active && `transition-delay: 250ms;`}
   pointer-events: none;
   @media screen and (orientation: landscape) {
     display: none;
@@ -531,8 +532,8 @@ const Flair1 = styled.div`
   bottom: 0;
   left: -100%;
   right: -100%;
-  transition: 1000ms;
-  transition-delay: 250ms;
+  transition: ${props => (props.active ? 1000 : 200)}ms;
+  ${props => props.active && `transition-delay: 250ms;`}
 `
 const Flair2 = styled.div`
   opacity: ${props => (props.active ? 0.33 : 1)};
@@ -544,8 +545,8 @@ const Flair2 = styled.div`
   bottom: 0;
   left: -100%;
   right: -100%;
-  transition: 1000ms;
-  transition-delay: 250ms;
+  transition: ${props => (props.active ? 1000 : 200)}ms;
+  ${props => props.active && `transition-delay: 250ms;`}
 `
 const Flair3 = styled.div`
   opacity: ${props => (props.active ? 0.33 : 1)};
@@ -557,8 +558,8 @@ const Flair3 = styled.div`
   bottom: 0;
   left: -100%;
   right: -100%;
-  transition: 1000ms;
-  transition-delay: 250ms;
+  transition: ${props => (props.active ? 1000 : 200)}ms;
+  ${props => props.active && `transition-delay: 250ms;`}
 `
 
 class Header extends React.Component {
