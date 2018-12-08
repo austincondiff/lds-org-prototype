@@ -360,7 +360,7 @@ const MenuCategoryLabel = styled.h4`
   text-transform: uppercase;
   margin-bottom: 16px;
   @media (max-width: 599px) {
-    font-size: 11px;
+    font-size: 12px;
   }
 `
 const MenuCategoryItem = styled.li`
@@ -372,7 +372,7 @@ const MenuCategoryItem = styled.li`
   font-weight: 600;
   font-size: 13px;
   @media (max-width: 599px) {
-    font-size: 11px;
+    font-size: 12px;
   }
 `
 const MenuCategoryItemLink = styled(Link)`
@@ -385,6 +385,9 @@ const MobileMenu = styled.div`
   opacity: ${props => (props.show ? 1 : 0)};
   ${props => !props.show && 'pointer-events: none;'}
   transition: 250ms;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   @media (max-width: 1023px) {
     display: flex;
     flex-direction: column;
@@ -398,6 +401,7 @@ const MobileNavItems = styled.ul`
   margin: 16px 0;
   padding: 0;
   width: 100%;
+  padding-bottom: 30%;
 `
 const MobileNavItemWrap = styled.li`
   list-style: none;
@@ -422,7 +426,7 @@ const MobileNavItem = styled.div`
   padding: 12px 48px;
   width: 100%;
   @media (max-width: 767px) {
-    font-size: 12px;
+    font-size: 13px;
   }
   @media (max-width: 599px) {
     padding: 12px 24px;
@@ -481,6 +485,56 @@ const Row = styled.div`
 const Col = styled.div`
   flex: 1;
   padding: 8px;
+`
+const FlairWrap = styled.div`
+  position: absolute;
+  margin-bottom: -85%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: ${props => (props.active ? 1 : 0)};
+  transition: 500ms;
+  transition-delay: 250ms;
+  pointer-events: none;
+`
+const Flair1 = styled.div`
+  opacity: ${props => (props.active ? 0.33 : 1)};
+  background-color: #01b6d1;
+  padding-top: 100%;
+  transform: rotate(${props => (props.active ? 6 : 44)}deg);
+  filter: blur(${props => (props.active ? 0 : 16)}px);
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  transition: 1000ms;
+  transition-delay: 250ms;
+`
+const Flair2 = styled.div`
+  opacity: ${props => (props.active ? 0.33 : 1)};
+  background-color: #01b6d1;
+  padding-top: 100%;
+  transform: rotate(${props => (props.active ? -16 : -36)}deg);
+  filter: blur(${props => (props.active ? 0 : 16)}px);
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  transition: 1000ms;
+  transition-delay: 250ms;
+`
+const Flair3 = styled.div`
+  opacity: ${props => (props.active ? 0.33 : 1)};
+  background-color: #01b6d1;
+  padding-top: 100%;
+  transform: rotate(${props => (props.active ? -26 : -46)}deg);
+  filter: blur(${props => (props.active ? 0 : 16)}px);
+  position: absolute;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  transition: 1000ms;
+  transition-delay: 250ms;
 `
 
 class Header extends React.Component {
@@ -716,6 +770,11 @@ class Header extends React.Component {
                 </MobileNavItemWrap>
               ))}
             </MobileNavItems>
+            <FlairWrap active={showMobileMenu}>
+              <Flair1 active={showMobileMenu} />
+              <Flair2 active={showMobileMenu} />
+              <Flair3 active={showMobileMenu} />
+            </FlairWrap>
           </MobileMenu>
         </HeaderWrap>
         <MenuShade
