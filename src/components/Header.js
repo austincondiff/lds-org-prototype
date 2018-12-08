@@ -389,6 +389,7 @@ const MobileMenu = styled.div`
   overflow-x: hidden;
   overflow-y: scroll;
   overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   @media (max-width: 1023px) {
     display: flex;
     flex-direction: column;
