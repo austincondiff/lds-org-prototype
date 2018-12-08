@@ -489,6 +489,8 @@ const Col = styled.div`
 const FlairWrap = styled.div`
   position: absolute;
   margin-bottom: -85%;
+  padding-top: 138%;
+  background-image: linear-gradient(to top, white 80%, transparent 100%);
   left: 0;
   right: 0;
   bottom: 0;
@@ -507,8 +509,6 @@ const Flair1 = styled.div`
   bottom: 0;
   left: -100%;
   right: -100%;
-  padding-top: 138%;
-  background-image: linear-gradient(to top, white 80%, transparent 100%);
   transition: 1000ms;
   transition-delay: 250ms;
 `
