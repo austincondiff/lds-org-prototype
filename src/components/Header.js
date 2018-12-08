@@ -517,6 +517,9 @@ const FlairWrap = styled.div`
   transition: 500ms;
   transition-delay: 250ms;
   pointer-events: none;
+  @media screen and (orientation: landscape) {
+    display: none;
+  }
 `
 const Flair1 = styled.div`
   opacity: ${props => (props.active ? 0.33 : 1)};
