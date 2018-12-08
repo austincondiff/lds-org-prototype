@@ -505,8 +505,10 @@ const Flair1 = styled.div`
   filter: blur(${props => (props.active ? 0 : 16)}px);
   position: absolute;
   bottom: 0;
-  left: -50%;
-  right: -50%;
+  left: -100%;
+  right: -100%;
+  padding-top: 138%;
+  background-image: linear-gradient(to top, white 80%, transparent 100%);
   transition: 1000ms;
   transition-delay: 250ms;
 `
@@ -518,8 +520,8 @@ const Flair2 = styled.div`
   filter: blur(${props => (props.active ? 0 : 16)}px);
   position: absolute;
   bottom: 0;
-  left: -50%;
-  right: -50%;
+  left: -100%;
+  right: -100%;
   transition: 1000ms;
   transition-delay: 250ms;
 `
@@ -531,8 +533,8 @@ const Flair3 = styled.div`
   filter: blur(${props => (props.active ? 0 : 16)}px);
   position: absolute;
   bottom: 0;
-  left: -50%;
-  right: -50%;
+  left: -100%;
+  right: -100%;
   transition: 1000ms;
   transition-delay: 250ms;
 `
