@@ -609,6 +609,7 @@ class Header extends React.Component {
                     this.setState({
                       showMobileMenu: !showMobileMenu,
                       menuMode: null,
+                      mobileMenuActiveItems: [],
                     })
                   }
                 >
