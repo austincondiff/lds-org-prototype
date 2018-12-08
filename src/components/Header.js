@@ -490,7 +490,11 @@ const FlairWrap = styled.div`
   position: absolute;
   margin-bottom: -85%;
   padding-top: 138%;
-  background-image: linear-gradient(to top, white 80%, transparent 100%);
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
   left: 0;
   right: 0;
   bottom: 0;
