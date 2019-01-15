@@ -2,7 +2,7 @@
 title: 'A Real Father'
 subtitle: 'Plans announced for revised Hymnbook, Children’s Songbook'
 excerpt: 'Sacred music teaches the doctrines of the gospel, nourishes us spiritually, and has the power to unify Church members throughout the world. The Church has announced it is revising the hymnbook and children’s songbook and invites members to participate.'
-image: 'https://www.lds.org/blog/bc/images/1600x900/resized-jelleke-vanooteghem-386009-unsplash.jpg'
+image: 'https://media.ldscdn.org/images/media-library/fatherhood/father-daughter-geese-921486-wallpaper.jpg'
 tags: ['Descipleship', 'Family', 'Love']
 category: 'Inspiration'
 contributor: 'janedoe'

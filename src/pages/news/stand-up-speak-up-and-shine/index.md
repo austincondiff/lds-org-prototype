@@ -2,7 +2,7 @@
 title: 'Stand Up, Speak Up, and Shine'
 subtitle: 'Plans announced for revised Hymnbook, Children’s Songbook'
 excerpt: 'Sacred music teaches the doctrines of the gospel, nourishes us spiritually, and has the power to unify Church members throughout the world. The Church has announced it is revising the hymnbook and children’s songbook and invites members to participate.'
-image: 'https://www.lds.org/blog/bc/images/1600x900/joy-jones-stand-up-blog-rawpixel-256641-unsplash-no_nose_ring.jpg'
+image: 'https://media.ldscdn.org/images/media-library/gospel-living/young-men-seminary-ogden-high-school-1499233-wallpaper.jpg'
 tags: ['New Products', 'Music and Arts']
 category: 'Inspiration'
 contributor: 'janedoe'
