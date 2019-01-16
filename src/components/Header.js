@@ -533,7 +533,7 @@ const Flair1 = styled.div`
   left: -100%;
   right: -100%;
   transition: ${props => (props.active ? 1000 : 200)}ms;
-  ${props => props.active && `transition-delay: 250ms;`}
+  ${props => props.active && `transition-delay: 100ms;`}
 `
 const Flair2 = styled.div`
   opacity: ${props => (props.active ? 0.33 : 1)};
@@ -546,7 +546,7 @@ const Flair2 = styled.div`
   left: -100%;
   right: -100%;
   transition: ${props => (props.active ? 1000 : 200)}ms;
-  ${props => props.active && `transition-delay: 250ms;`}
+  ${props => props.active && `transition-delay: 100ms;`}
 `
 const Flair3 = styled.div`
   opacity: ${props => (props.active ? 0.33 : 1)};
@@ -559,7 +559,7 @@ const Flair3 = styled.div`
   left: -100%;
   right: -100%;
   transition: ${props => (props.active ? 1000 : 200)}ms;
-  ${props => props.active && `transition-delay: 250ms;`}
+  ${props => props.active && `transition-delay: 100ms;`}
 `
 
 class Header extends React.Component {
