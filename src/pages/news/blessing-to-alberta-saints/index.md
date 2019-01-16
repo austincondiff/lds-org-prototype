@@ -2,7 +2,7 @@
 title: 'President Nelson Delivers Apostolic Blessing to Saints in Alberta'
 subtitle: 'Plans announced for revised Hymnbook, Children’s Songbook'
 excerpt: 'Sacred music teaches the doctrines of the gospel, nourishes us spiritually, and has the power to unify Church members throughout the world. The Church has announced it is revising the hymnbook and children’s songbook and invites members to participate.'
-image: 'https://www.lds.org/bc/content/ldsorg/church/news/2018/06/14/580-president-nelson-in-alberta_1.jpg'
+image: 'http://mediad.publicbroadcasting.net/p/radiowest/files/styles/x_large/public/201801/first-presidency-2018-cropped.jpg'
 tags: ['New Products', 'Music and Arts']
 category: 'Church News'
 contributor: 'janedoe'
